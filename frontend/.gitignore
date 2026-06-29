@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+package-lock.json
+pnpm-lock.yaml
+
+# Environment files (IMPORTANT - your Supabase keys!)
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.desktop
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Local files
+*.local
+
+# Documentation backups
+guidelines/
+Documentation/
+*.odt
+*.txt

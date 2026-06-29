@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Warm Cream Theme — Trust + Home Feeling */
+:root {
+  --cream: #F5F0E8;
+  --cream-dark: #E8E0D4;
+  --trust-blue: #1E3A8A;
+  --trust-blue-dark: #15307A;
+  --verified-green: #10B981;
+  --verified-green-dark: #0D9668;
+  --deep-navy: #0A1228;
+  --warm-amber: #F59E0B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B7280;
+  --border-light: rgba(0,0,0,0.06);
+}
+
+* {
+  border-color: var(--border-light);
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-dark);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, .serif {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding: 0 2rem;
+  }
+}
+
+/* Card hover lift animation */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+/* Heart save animation */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.heart-saved {
+  animation: heartBeat 0.3s ease;
+}
+
+/* Verified badge style */
+.verified-badge {
+  background-color: var(--verified-green);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Trust badge */
+.trust-badge {
+  background-color: rgba(30,58,138,0.08);
+  color: var(--trust-blue);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Hide mobile bottom nav on desktop */
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex !important;
+  }
+}

@@ -1,0 +1,53 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+*.log
+*.pot
+*.pyc
+*.sqlite3
+.DS_Store
+.coverage
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Django
+db.sqlite3
+*.sqlite3
+media/
+staticfiles/
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/.vite/
+frontend/dist/
+frontend/build/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+*.backup
+*.bak
+full_codebase.txt
