@@ -4,7 +4,7 @@ import { Plus, ShieldCheck, Clock, XCircle, BarChart2, LogOut, HomeIcon, Message
 import { getImageUrl, PLACEHOLDER_IMAGE } from "../../lib/api";
 import { getCurrentUser, signOut } from "../../lib/auth";
 import { fetchLandlordProperties } from "../../lib/properties";
-import type { ListingStatus } from "../../lib/database.types";
+import type { ListingStatus } from "../../lib/api";
 
 interface LandlordProperty {
   id: string;

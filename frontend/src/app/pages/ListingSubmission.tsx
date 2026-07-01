@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { Upload, Link as LinkIcon, CheckCircle, Loader2, AlertCircle } from "lucide-react";
+import { Upload, X, CheckCircle, Loader2, AlertCircle, ImageIcon } from "lucide-react";
 import { getCurrentUser } from "../../lib/auth";
-import { submitProperty } from "../../lib/properties";
-import type { NoiseLevel } from "../../lib/database.types";
+import { submitProperty, uploadPropertyImages } from "../../lib/properties";
+import type { NoiseLevel } from "../../lib/api";
+
+const MIN_PHOTOS = 5;
+const MAX_PHOTOS = 20;
 
 const PROPERTY_TYPES = ["Apartment", "House", "Townhouse", "Studio", "Villa"] as const;
 const NOISE_LEVELS = ["Quiet", "Moderate", "Lively"] as const;
 const LIFESTYLE_OPTIONS = ["Quiet living", "Social areas", "Work-friendly zones"] as const;
-
-type ImageMode = "url" | "upload";
 
 interface FormState {
   title: string;
@@ -27,9 +28,7 @@ interface FormState {
   commuteRating: string;
   lifestyleTags: string[];
   areaInsight: string;
-  imageUrl: string;
-  imageFile: File | null;
-  imageMode: ImageMode;
+  photos: File[];
 }
 
 const INITIAL_FORM: FormState = {
@@ -37,7 +36,7 @@ const INITIAL_FORM: FormState = {
   price: "", bedrooms: "", bathrooms: "", sizeSqft: "",
   propertyType: "Apartment", safetyScore: "", noiseLevel: "Moderate",
   commuteRating: "", lifestyleTags: [], areaInsight: "",
-  imageUrl: "", imageFile: null, imageMode: "url",
+  photos: [],
 };
 
 function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
@@ -72,9 +71,17 @@ export default function ListingSubmission() {
     }));
   }
 
-  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0] ?? null;
-    setForm((prev) => ({ ...prev, imageFile: file }));
+  function handleFilesAdded(files: FileList | null) {
+    if (!files) return;
+    const incoming = Array.from(files);
+    setForm((prev) => {
+      const combined = [...prev.photos, ...incoming].slice(0, MAX_PHOTOS);
+      return { ...prev, photos: combined };
+    });
+  }
+
+  function removePhoto(index: number) {
+    setForm((prev) => ({ ...prev, photos: prev.photos.filter((_, i) => i !== index) }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -97,7 +104,13 @@ export default function ListingSubmission() {
       return;
     }
 
-    const { error } = await submitProperty({
+    if (form.photos.length < MIN_PHOTOS) {
+      setSubmitError(`Please add at least ${MIN_PHOTOS} photos. You currently have ${form.photos.length}.`);
+      setSubmitting(false);
+      return;
+    }
+
+    const { data: property, error } = await submitProperty({
       landlordId: user.id,
       title: form.title,
       description: form.description,
@@ -114,14 +127,24 @@ export default function ListingSubmission() {
       commuteRating: Number(form.commuteRating),
       lifestyleTags: form.lifestyleTags,
       areaInsight: form.areaInsight,
-      imageFile: form.imageFile,
-      imageUrl: form.imageUrl,
+      imageFile: null,
+      imageUrl: "",
     });
+
+    if (error || !property) {
+      setSubmitting(false);
+      setSubmitError("Something went wrong submitting your listing. Please check your details and try again.");
+      return;
+    }
+
+    const { error: uploadError } = await uploadPropertyImages(property.id, form.photos);
 
     setSubmitting(false);
 
-    if (error) {
-      setSubmitError("Something went wrong submitting your listing. Please check your details and try again.");
+    if (uploadError) {
+      setSubmitError(
+        `Your listing was created, but photo upload failed: ${uploadError}. Go to "My listings" to add photos and complete your submission.`
+      );
       return;
     }
 
@@ -333,73 +356,65 @@ export default function ListingSubmission() {
             </Field>
           </div>
 
-          {/* ── Property photo ── */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm space-y-4">
-            <h2 className="text-base font-semibold text-gray-900">Property photo</h2>
-            <div className="flex gap-1 bg-gray-50 border border-gray-200 rounded-xl p-1 w-fit">
-              <button
-                type="button"
-                onClick={() => setForm((prev) => ({ ...prev, imageMode: "url" }))}
-                className={`flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm transition-colors ${
-                  form.imageMode === "url" ? "bg-white shadow text-primary" : "text-gray-500 hover:text-gray-700"
-                }`}
-              >
-                <LinkIcon className="w-3.5 h-3.5" />
-                Image URL
-              </button>
-              <button
-                type="button"
-                onClick={() => setForm((prev) => ({ ...prev, imageMode: "upload" }))}
-                className={`flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm transition-colors ${
-                  form.imageMode === "upload" ? "bg-white shadow text-primary" : "text-gray-500 hover:text-gray-700"
-                }`}
-              >
-                <Upload className="w-3.5 h-3.5" />
-                Upload photo
-              </button>
-            </div>
-
-            {form.imageMode === "url" ? (
-              <Field label="Image URL" hint="Paste an Unsplash URL or any direct image link">
-                <input
-                  name="imageUrl"
-                  value={form.imageUrl}
-                  onChange={handleChange}
-                  placeholder="/images/placeholders/property-placeholder.svg"
-                  className={inputClass}
-                />
-                {form.imageUrl && (
-                  <div className="mt-3 h-48 rounded-xl overflow-hidden bg-gray-100">
-                    <img
-                      src={form.imageUrl}
-                      alt="Preview"
-                      className="w-full h-full object-cover"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                    />
-                  </div>
-                )}
-              </Field>
-            ) : (
-              <Field label="Upload photo" hint="JPG or PNG. Max 5MB. Will be stored in WhyBuilder's image library.">
-                <label className="flex flex-col items-center justify-center w-full h-36 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-primary transition-colors bg-gray-50">
-                  <Upload className="w-6 h-6 text-gray-300 mb-2" />
-                  <span className="text-sm text-gray-400">
-                    {form.imageFile ? form.imageFile.name : "Click to choose a file"}
-                  </span>
-                  <input type="file" accept="image/jpeg,image/png,image/webp" onChange={handleFileChange} className="hidden" />
-                </label>
-                {form.imageFile && (
-                  <div className="mt-3 h-48 rounded-xl overflow-hidden bg-gray-100">
-                    <img
-                      src={URL.createObjectURL(form.imageFile)}
-                      alt="Preview"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )}
-              </Field>
-            )}
+        {/* — Property photos — */}
+        <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm space-y-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-base font-semibold text-gray-900">Property photos</h2>
+            <span className={`text-xs font-medium ${form.photos.length >= MIN_PHOTOS ? "text-secondary" : "text-amber-600"}`}>
+              {form.photos.length} of {MIN_PHOTOS} minimum
+            </span>
           </div>
+          <p className="text-xs text-gray-400">
+            Add at least {MIN_PHOTOS} photos covering different rooms and angles (max {MAX_PHOTOS}).
+            JPG, PNG, or WebP. Each photo must be at least 800x600px. Photos are reviewed before your listing goes live.
+          </p>
+
+          <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-primary transition-colors bg-gray-50">
+            <Upload className="w-6 h-6 text-gray-300 mb-2" />
+            <span className="text-sm text-gray-400">Click to add photos, or drag them here</span>
+            <input
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              multiple
+              onChange={(e) => handleFilesAdded(e.target.files)}
+              className="hidden"
+            />
+          </label>
+
+          {form.photos.length > 0 && (
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+              {form.photos.map((file, index) => (
+                <div key={index} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100 group">
+                  <img
+                    src={URL.createObjectURL(file)}
+                    alt={`Photo ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => removePhoto(index)}
+                    aria-label="Remove photo"
+                    className="absolute top-1 right-1 w-6 h-6 rounded-full bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                  {index === 0 && (
+                    <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded text-[10px] font-medium bg-white/90 text-gray-700">
+                      Cover photo
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {form.photos.length === 0 && (
+            <div className="flex items-center gap-2 text-xs text-gray-400">
+              <ImageIcon className="w-3.5 h-3.5" />
+              No photos added yet
+            </div>
+          )}
+        </div>
 
           {/* ── Error banner ── */}
           {submitError && (

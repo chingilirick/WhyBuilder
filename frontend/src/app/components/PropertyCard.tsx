@@ -58,10 +58,17 @@ export function PropertyCard({ property }: PropertyCardProps) {
           onError={() => setImgError(true)}
         />
 
-        <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
-          <Icons.ShieldCheck size={12} className="text-emerald-500" />
-          <span className="text-xs font-medium text-gray-700">Verified</span>
-        </div>
+        {property.listing_status === 'verified' ? (
+          <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+            <Icons.ShieldCheck size={12} className="text-emerald-500" />
+            <span className="text-xs font-medium text-gray-700">Verified</span>
+          </div>
+        ) : property.listing_status === 'pending' ? (
+          <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+            <Icons.Clock size={12} className="text-amber-500" />
+            <span className="text-xs font-medium text-gray-700">Pending review</span>
+          </div>
+        ) : null}
 
         <button
           onClick={handleSave}

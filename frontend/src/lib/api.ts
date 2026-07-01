@@ -378,3 +378,83 @@ export const notifications = {
     return request(`/notifications/${id}/read/`, { method: "POST" });
   }
 };
+
+export interface ImageUploadResult {
+  created_ids: number[];
+  total_images: number;
+  meets_minimum: boolean;
+}
+
+export async function uploadPropertyImages(
+  propertyId: string,
+  files: File[]
+): Promise<{ data: ImageUploadResult | null; error: string | null }> {
+  const formData = new FormData();
+  files.forEach((file) => formData.append("images", file));
+
+  const t = token.get();
+  try {
+    const res = await fetch(`${API_URL}/properties/${propertyId}/images/`, {
+      method: "POST",
+      headers: {
+        ...(t ? { Authorization: `Bearer ${t}` } : {}),
+      },
+      body: formData,
+    });
+    const responseData = await res.json();
+    if (!res.ok) {
+      return { data: null, error: responseData.error || responseData.detail || `HTTP ${res.status}` };
+    }
+    return { data: responseData, error: null };
+  } catch (err) {
+    return { data: null, error: err instanceof Error ? err.message : "Network error" };
+  }
+}
+
+export async function deletePropertyImage(
+  propertyId: string,
+  imageId: number
+): Promise<{ error: string | null }> {
+  const t = token.get();
+  try {
+    const res = await fetch(`${API_URL}/properties/${propertyId}/images/${imageId}/`, {
+      method: "DELETE",
+      headers: {
+        ...(t ? { Authorization: `Bearer ${t}` } : {}),
+      },
+    });
+    if (!res.ok) {
+      const responseData = await res.json().catch(() => ({}));
+      return { error: responseData.error || responseData.detail || `HTTP ${res.status}` };
+    }
+    return { error: null };
+  } catch (err) {
+    return { error: err instanceof Error ? err.message : "Network error" };
+  }
+}
+
+export const admin = {
+  async getPendingListings(): Promise<{ data: Property[] | null; error: string | null }> {
+    return request<Property[]>("/properties/pending/");
+  },
+
+  async verifyListing(
+    id: string,
+    action: "approved" | "rejected"
+  ): Promise<{ data: Property | null; error: string | null }> {
+    return request<Property>(`/properties/${id}/verify/`, {
+      method: "PATCH",
+      body: JSON.stringify({ action }),
+    });
+  },
+
+  async updateListing(
+    id: string,
+    fields: Partial<Property>
+  ): Promise<{ data: Property | null; error: string | null }> {
+    return request<Property>(`/properties/${id}/update/`, {
+      method: "PATCH",
+      body: JSON.stringify(fields),
+    });
+  },
+};

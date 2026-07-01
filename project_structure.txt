@@ -1,0 +1,299 @@
+.
+├── frontend
+│   ├── public
+│   │   ├── icons
+│   │   ├── images
+│   │   │   ├── hero
+│   │   │   │   ├── karen-peaceful-01.jpg
+│   │   │   │   ├── lavington-elegant-01.jpg
+│   │   │   │   └── westlands-vibrant-01.jpg
+│   │   │   ├── how-it-works
+│   │   │   │   ├── check-verified-01.jpg
+│   │   │   │   ├── choose-confident-01.jpg
+│   │   │   │   └── tell-modern-01.jpg
+│   │   │   ├── lifestyle
+│   │   │   │   ├── karen-quiet-01.jpg
+│   │   │   │   ├── lavington-work-01.jpg
+│   │   │   │   ├── quiet-living-alt.jpg
+│   │   │   │   ├── social-alt.jpg
+│   │   │   │   ├── westlands-social-01.jpg
+│   │   │   │   └── work-friendly-alt.jpg
+│   │   │   ├── placeholders
+│   │   │   │   ├── icon-placeholder.svg
+│   │   │   │   └── property-placeholder.svg
+│   │   │   └── properties
+│   │   │       ├── karen-aerial-01.jpg
+│   │   │       ├── karen-aerial-02.jpg
+│   │   │       ├── karen-aerial-03.jpg
+│   │   │       ├── karen-aerial-04.jpg
+│   │   │       ├── karen-aerial-05.jpg
+│   │   │       ├── karen-aerial-06.jpg
+│   │   │       ├── karen-family-peaceful-01.jpg
+│   │   │       ├── karen-family-peaceful-02.jpg
+│   │   │       ├── karen-family-peaceful-03.jpg
+│   │   │       ├── karen-family-peaceful-04.jpg
+│   │   │       ├── karen-family-peaceful-05.jpg
+│   │   │       ├── karen-family-peaceful-06.jpg
+│   │   │       ├── karen-family-peaceful-07.jpg
+│   │   │       ├── karen-family-peaceful-08.jpg
+│   │   │       ├── karen-green-01.jpg
+│   │   │       ├── karen-green-02.jpg
+│   │   │       ├── karen-green-03.jpg
+│   │   │       ├── karen-green-04.jpg
+│   │   │       ├── karen-green-05.jpg
+│   │   │       ├── karen-green-06.jpg
+│   │   │       ├── karen-green-07.jpg
+│   │   │       ├── karen-green-08.jpg
+│   │   │       ├── karen-green-09.jpg
+│   │   │       ├── karen-spacious-01.jpg
+│   │   │       ├── karen-spacious-02.jpg
+│   │   │       ├── karen-spacious-03.jpg
+│   │   │       ├── karen-spacious-04.jpg
+│   │   │       ├── karen-spacious-05.jpg
+│   │   │       ├── karen-spacious-06.jpg
+│   │   │       ├── karen-spacious-07.jpg
+│   │   │       ├── karen-spacious-08.jpg
+│   │   │       ├── karen-spacious-09.jpg
+│   │   │       ├── lavington-established-01.jpg
+│   │   │       ├── lavington-established-02.jpg
+│   │   │       ├── lavington-established-03.jpg
+│   │   │       ├── lavington-established-04.jpg
+│   │   │       ├── lavington-established-05.jpg
+│   │   │       ├── lavington-established-06.jpg
+│   │   │       ├── lavington-established-07.jpg
+│   │   │       ├── lavington-established-08.jpg
+│   │   │       ├── lavington-established-09.jpg
+│   │   │       ├── lavington-luxury-01.jpg
+│   │   │       ├── lavington-luxury-02.jpg
+│   │   │       ├── lavington-luxury-03.jpg
+│   │   │       ├── lavington-luxury-04.jpg
+│   │   │       ├── lavington-luxury-05.jpg
+│   │   │       ├── lavington-luxury-06.jpg
+│   │   │       ├── lavington-luxury-07.jpg
+│   │   │       ├── lavington-quiet-01.jpg
+│   │   │       ├── lavington-quiet-02.jpg
+│   │   │       ├── lavington-quiet-03.jpg
+│   │   │       ├── lavington-quiet-04.jpg
+│   │   │       ├── lavington-quiet-05.jpg
+│   │   │       ├── lavington-quiet-06.jpg
+│   │   │       ├── lavington-quiet-07.jpg
+│   │   │       ├── lavington-quiet-08.jpg
+│   │   │       ├── lavington-quiet-09.jpg
+│   │   │       ├── lavington-quiet-10.jpg
+│   │   │       ├── property-1.jpg
+│   │   │       ├── property-2.jpg
+│   │   │       ├── property-3.jpg
+│   │   │       ├── westlands-modern-03.jpg
+│   │   │       ├── westlands-urban-01.jpg
+│   │   │       ├── westlands-urban-02.jpg
+│   │   │       ├── westlands-urban-03.jpg
+│   │   │       ├── westlands-urban-04.jpg
+│   │   │       ├── westlands-urban-05.jpg
+│   │   │       ├── westlands-urban-06.jpg
+│   │   │       ├── westlands-urban-07.jpg
+│   │   │       ├── westlands-urban-08.jpg
+│   │   │       ├── westlands-vibrant-01.jpg
+│   │   │       ├── westlands-vibrant-02.jpg
+│   │   │       ├── westlands-vibrant-03.jpg
+│   │   │       ├── westlands-vibrant-04.jpg
+│   │   │       ├── westlands-vibrant-05.jpg
+│   │   │       ├── westlands-vibrant-06.jpg
+│   │   │       └── westlands-vibrant-07.jpg
+│   │   └── logo.png
+│   ├── server
+│   │   ├── index.js
+│   │   ├── index.js.fixed
+│   │   └── package.json
+│   ├── src
+│   │   ├── app
+│   │   │   ├── components
+│   │   │   │   ├── common
+│   │   │   │   │   ├── accordion.tsx
+│   │   │   │   │   ├── alert-dialog.tsx
+│   │   │   │   │   ├── alert.tsx
+│   │   │   │   │   ├── aspect-ratio.tsx
+│   │   │   │   │   ├── avatar.tsx
+│   │   │   │   │   ├── badge.tsx
+│   │   │   │   │   ├── breadcrumb.tsx
+│   │   │   │   │   ├── button.tsx
+│   │   │   │   │   ├── calendar.tsx
+│   │   │   │   │   ├── card.tsx
+│   │   │   │   │   ├── carousel.tsx
+│   │   │   │   │   ├── chart.tsx
+│   │   │   │   │   ├── checkbox.tsx
+│   │   │   │   │   ├── collapsible.tsx
+│   │   │   │   │   ├── command.tsx
+│   │   │   │   │   ├── context-menu.tsx
+│   │   │   │   │   ├── dialog.tsx
+│   │   │   │   │   ├── drawer.tsx
+│   │   │   │   │   ├── dropdown-menu.tsx
+│   │   │   │   │   ├── form.tsx
+│   │   │   │   │   ├── hover-card.tsx
+│   │   │   │   │   ├── input-otp.tsx
+│   │   │   │   │   ├── input.tsx
+│   │   │   │   │   ├── label.tsx
+│   │   │   │   │   ├── menubar.tsx
+│   │   │   │   │   ├── navigation-menu.tsx
+│   │   │   │   │   ├── pagination.tsx
+│   │   │   │   │   ├── popover.tsx
+│   │   │   │   │   ├── progress.tsx
+│   │   │   │   │   ├── radio-group.tsx
+│   │   │   │   │   ├── resizable.tsx
+│   │   │   │   │   ├── scroll-area.tsx
+│   │   │   │   │   ├── select.tsx
+│   │   │   │   │   ├── separator.tsx
+│   │   │   │   │   ├── sheet.tsx
+│   │   │   │   │   ├── sidebar.tsx
+│   │   │   │   │   ├── skeleton.tsx
+│   │   │   │   │   ├── slider.tsx
+│   │   │   │   │   ├── sonner.tsx
+│   │   │   │   │   ├── switch.tsx
+│   │   │   │   │   ├── table.tsx
+│   │   │   │   │   ├── tabs.tsx
+│   │   │   │   │   ├── textarea.tsx
+│   │   │   │   │   ├── toggle-group.tsx
+│   │   │   │   │   ├── toggle.tsx
+│   │   │   │   │   ├── tooltip.tsx
+│   │   │   │   │   ├── use-mobile.ts
+│   │   │   │   │   └── utils.ts
+│   │   │   │   ├── features
+│   │   │   │   │   ├── admin
+│   │   │   │   │   │   ├── HeroSlidesManager.tsx
+│   │   │   │   │   │   └── NeighbourhoodsManager.tsx
+│   │   │   │   │   └── home
+│   │   │   │   │       ├── FeaturedProperties.tsx
+│   │   │   │   │       ├── HeroSection.tsx
+│   │   │   │   │       ├── HowItWorks.tsx
+│   │   │   │   │       ├── LifestyleMatching.tsx
+│   │   │   │   │       └── TrustLayer.tsx
+│   │   │   │   ├── forms
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── LocationCapture.tsx
+│   │   │   │   │   └── LocationInput.tsx
+│   │   │   │   ├── layout
+│   │   │   │   ├── ui
+│   │   │   │   ├── ContactModal.tsx
+│   │   │   │   ├── CurrencyToggle.tsx
+│   │   │   │   ├── ErrorMessage.tsx
+│   │   │   │   ├── Footer.tsx
+│   │   │   │   ├── ForgotPassword.tsx
+│   │   │   │   ├── Header.tsx
+│   │   │   │   ├── Icon.tsx
+│   │   │   │   ├── LoadingSpinner.tsx
+│   │   │   │   ├── PropertyCard.tsx
+│   │   │   │   ├── PropertyMap.tsx
+│   │   │   │   ├── ProtectedRoute.tsx
+│   │   │   │   └── Seo.tsx
+│   │   │   ├── context
+│   │   │   │   └── CurrencyContext.tsx
+│   │   │   ├── hooks
+│   │   │   │   ├── useCurrency.ts
+│   │   │   │   ├── useSavedProperties.ts
+│   │   │   │   └── useUserPreferences.ts
+│   │   │   ├── pages
+│   │   │   │   ├── About.tsx
+│   │   │   │   ├── AdminDashboard.tsx
+│   │   │   │   ├── Auth.tsx
+│   │   │   │   ├── Browse.tsx
+│   │   │   │   ├── DecisionQuiz.tsx
+│   │   │   │   ├── ForgotPassword.tsx
+│   │   │   │   ├── Home.tsx
+│   │   │   │   ├── LandlordDashboard.tsx
+│   │   │   │   ├── LandlordProfile.tsx
+│   │   │   │   ├── ListingSubmission.tsx
+│   │   │   │   ├── Neighbourhood.tsx
+│   │   │   │   ├── NotFound.tsx
+│   │   │   │   ├── PropertyDetail.tsx
+│   │   │   │   ├── Root.tsx
+│   │   │   │   ├── UpgradeSubscription.tsx
+│   │   │   │   └── UserAccount.tsx
+│   │   │   ├── App.tsx
+│   │   │   └── routes.tsx
+│   │   ├── context
+│   │   │   ├── CurrencyContext.tsx
+│   │   │   └── ThemeContext.tsx
+│   │   ├── lib
+│   │   │   ├── api.ts
+│   │   │   ├── auth.ts
+│   │   │   ├── database.types.ts
+│   │   │   └── properties.ts
+│   │   ├── styles
+│   │   │   ├── fonts.css
+│   │   │   ├── index.css
+│   │   │   ├── tailwind.css
+│   │   │   └── theme.css
+│   │   ├── utils
+│   │   │   └── theme.ts
+│   │   ├── index.css
+│   │   ├── LANGUAGE_GUIDE.md
+│   │   └── main.tsx
+│   ├── check-setup.sh
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.mjs
+│   └── vite.config.ts
+├── landlord
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── landlords
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── properties
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_add_image_url.py
+│   │   └── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── filters.py
+│   ├── geocoding.py
+│   ├── __init__.py
+│   ├── location_serializers.py
+│   ├── location_views.py
+│   ├── models.py
+│   ├── pexels-artbovich-7031840_card.jpg
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── users
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── whybuilder_api
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── settings.py.backup
+│   ├── urls.py
+│   └── wsgi.py
+├── full_codebase.txt
+├── LocationCapture.tsx
+├── LocationInput.tsx
+├── manage.py
+├── project_structure.txt
+├── README.md
+├── requirements.txt
+└── seed_properties.py
+
+37 directories, 260 files

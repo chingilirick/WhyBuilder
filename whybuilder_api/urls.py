@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/properties/', include('properties.urls')),
+    path('api/auth/', include('users.urls')),
 ]
 
 if settings.DEBUG:

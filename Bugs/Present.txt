@@ -1,0 +1,32 @@
+What you actually have right now, stated plainly:
+Looking at your screenshots and code, the system is in better shape than you think. Here's what's genuinely working: Browse page renders real listings with images and verified badges, the hero section works, About page is clean, auth flow exists, and the landlord dashboard has the core structure. That's a real foundation — not a prototype.
+The three categories of problems, separated by severity:
+Category 1 — Must fix before showing anyone (breaks the product promise):
+database.types.ts exists (confirmed in the tree at frontend/src/lib/), but LandlordDashboard.tsx imports ListingStatus from it while the exact same type already exists in api.ts at line 2297. Two sources of truth for the same type is a ticking clock — one gets updated, the other doesn't, they drift. Fix: single import source.
+settings.py has DEBUG = True, hardcoded SECRET_KEY, and WhyBuilder2026 DB password in plaintext. This is the most serious real-world issue. Per OWASP A02 (Cryptographic Failures) and A05 (Security Misconfiguration) — if you ever push this to a live server in this state, you're exposed. Not theoretical, actual.
+frontend/server/index.js — the old Express backend — is still sitting in your repo with a different hardcoded password. Dead code + credentials = unnecessary attack surface.
+Category 2 — Functional gaps that hurt the landlord pitch:
+PropertyDetail page (localhost:5173/property/4) — you showed this in previous sessions as still broken visually. From the code, the hero image now has the fallback fix we applied, but the page uses hardcoded bg-gray-50/bg-white throughout (same gray-class problem as LandlordDashboard) so it breaks on dark theme, and the "Listed By" section tries to render property.users which your Django serializer doesn't return — it returns landlord_name and landlord_email as flat strings, not a nested users object. That section currently renders nothing.
+HeroSection still has a "Find my match" button pointing to /quiz — which is a dead route in your updated routes.tsx. The route was removed but the button wasn't updated.
+Footer has links to "Decision quiz", "Neighbourhoods" — both dead routes.
+Category 3 — Polish and consistency (fix after Category 1 and 2):
+Theme inconsistency across 17+ files using hardcoded gray-* Tailwind classes instead of your CSS variables. PropertyDetail.tsx, Auth.tsx, LandlordDashboard.tsx, FeaturedProperties.tsx are the worst offenders.
+seed_properties.py references westlands-modern-01.jpg but the actual file in media/ is westlands-modern-03.jpg — seed image mismatch.
+About.tsx still has animated counter stats (1,523 homes, 98% verification rate) that are hardcoded fiction. Fine for now, but flag it for when you start showing this to real landlords.
+
+What's actually clean and good — don't touch these:
+routes.tsx — already has DecisionQuiz and Neighbourhood removed. That cleanup already happened.
+PropertyCard.tsx — badge fix applied correctly.
+LandlordDashboard.tsx — honest status logic is solid.
+properties/ backend — CRUD is real, serializer is correct.
+ThemeContext.tsx + index.css — the token system itself is right, just underused.
+
+Proposed fix order, one at a time:
+
+Fix PropertyDetail.tsx "Listed By" section (maps wrong field names to your actual serializer output)
+Fix HeroSection.tsx "Find my match" button (change /quiz → /browse)
+Fix Footer.tsx dead links (remove decision quiz + neighbourhoods)
+Fix LandlordDashboard.tsx import (single source from api.ts)
+Move secrets to .env (settings.py hardening)
+Delete frontend/server/ (dead Express backend)
+Theme audit sweep (gray → CSS variables, batch operation)

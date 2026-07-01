@@ -49,6 +49,8 @@ class Property(models.Model):
     verified_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='properties/', null=True, blank=True)
+    image_url = models.CharField(max_length=500, null=True, blank=True)
 
     @property
     def full_address(self):
@@ -60,3 +62,17 @@ class Property(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class PropertyImage(models.Model):
+    property = models.ForeignKey(Property, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='properties/gallery/')
+    image_hash = models.CharField(max_length=64, blank=True, db_index=True)
+    display_order = models.PositiveIntegerField(default=0)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['display_order', 'uploaded_at']
+
+    def __str__(self):
+        return f"Image {self.id} for {self.property.title}"

@@ -51,3 +51,4 @@ Thumbs.db
 *.backup
 *.bak
 full_codebase.txt
+whybuilder_api/.gitignore

@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
 
 export function Footer() {
   return (
@@ -24,7 +25,7 @@ export function Footer() {
               <span style={{ fontWeight: 600, fontSize: 14, color: "var(--text-primary)" }}>WhyBuilder</span>
             </Link>
             <p style={{ fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6, margin: 0, maxWidth: 200 }}>
-              Decision infrastructure for housing.
+              Verified rental listings for Nairobi.
             </p>
           </div>
 
@@ -32,19 +33,8 @@ export function Footer() {
           <div>
             <p style={{ fontSize: 10, fontWeight: 600, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 12px" }}>Discover</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <Link to="/browse" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">Browse homes</Link>
-              <Link to="/browse" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">Neighbourhoods</Link>
-              <Link to="/quiz" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">Decision quiz</Link>
-            </div>
-          </div>
-
-          {/* Trust */}
-          <div>
-            <p style={{ fontSize: 10, fontWeight: 600, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 12px" }}>Trust</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <Link to="/about" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">How we verify</Link>
-              <Link to="/browse" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">Landlord profiles</Link>
-              <Link to="/about" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">Safety scores</Link>
+              <Link to="/browse" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover-text-primary">Browse homes</Link>
+              <Link to="/about" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover-text-primary">How verification works</Link>
             </div>
           </div>
 
@@ -52,34 +42,41 @@ export function Footer() {
           <div>
             <p style={{ fontSize: 10, fontWeight: 600, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 12px" }}>Company</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <Link to="/about" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">Our mission</Link>
-              <Link to="/about" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">Contact</Link>
-              <Link to="/auth?mode=signup&type=landlord" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover:text-primary">For landlords</Link>
+              <Link to="/about" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover-text-primary">Our mission</Link>
+              <Link to="/about" style={{ fontSize: 13, color: "var(--text-secondary)", textDecoration: "none" }} className="hover-text-primary">Contact</Link>
             </div>
+          </div>
+
+          {/* For Landlords — promoted, visually distinct */}
+          <div>
+            <p style={{ fontSize: 10, fontWeight: 600, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 12px" }}>List with us</p>
+            <Link
+              to="/auth?mode=signup&type=landlord"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                fontSize: 13,
+                fontWeight: 600,
+                color: "var(--color-primary)",
+                textDecoration: "none",
+                border: "1px solid var(--color-primary)",
+                borderRadius: 8,
+                padding: "6px 12px",
+              }}
+              className="hover-text-primary"
+            >
+              For landlords <ArrowRight size={13} />
+            </Link>
+            <p style={{ fontSize: 11, color: "var(--text-muted)", margin: "8px 0 0", maxWidth: 160 }}>
+              List a verified property in minutes.
+            </p>
           </div>
         </div>
 
         {/* Divider */}
         <div style={{ borderTop: "0.5px solid var(--border-light)", paddingTop: "1.5rem", marginBottom: "1.5rem" }}>
 
-          {/* Three pillars */}
-          <div style={{ display: "flex", gap: "2.5rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
-            {[
-              { n: "1", title: "Decide", sub: "What fits your life" },
-              { n: "2", title: "Verify", sub: "Every listing reviewed" },
-              { n: "3", title: "Move", sub: "With confidence" },
-            ].map(({ n, title, sub }) => (
-              <div key={n} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <div style={{ width: 24, height: 24, borderRadius: "50%", background: "var(--color-primary)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: "#fff" }}>{n}</span>
-                </div>
-                <div>
-                  <p style={{ fontSize: 12, fontWeight: 600, color: "var(--text-primary)", margin: 0 }}>{title}</p>
-                  <p style={{ fontSize: 11, color: "var(--text-muted)", margin: 0 }}>{sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
 
           {/* Bottom bar */}
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 8 }}>

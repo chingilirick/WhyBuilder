@@ -1,0 +1,3425 @@
+=== PROJECT STRUCTURE ===
+.
+├── export_full.sh
+├── frontend
+│   ├── check-setup.sh
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.mjs
+│   ├── public
+│   │   ├── icons
+│   │   ├── images
+│   │   │   ├── hero
+│   │   │   ├── how-it-works
+│   │   │   ├── lifestyle
+│   │   │   ├── placeholders
+│   │   │   └── properties
+│   │   └── logo.png
+│   ├── server
+│   │   ├── index.js
+│   │   └── package.json
+│   ├── src
+│   │   ├── app
+│   │   │   ├── App.tsx
+│   │   │   ├── components
+│   │   │   ├── context
+│   │   │   ├── hooks
+│   │   │   ├── pages
+│   │   │   └── routes.tsx
+│   │   ├── context
+│   │   │   ├── CurrencyContext.tsx
+│   │   │   └── ThemeContext.tsx
+│   │   ├── index.css
+│   │   ├── LANGUAGE_GUIDE.md
+│   │   ├── lib
+│   │   │   ├── api.ts
+│   │   │   ├── auth.ts
+│   │   │   ├── database.types.ts
+│   │   │   └── properties.ts
+│   │   ├── main.tsx
+│   │   ├── styles
+│   │   │   ├── fonts.css
+│   │   │   ├── index.css
+│   │   │   ├── tailwind.css
+│   │   │   └── theme.css
+│   │   └── utils
+│   │       └── theme.ts
+│   └── vite.config.ts
+├── full_codebase.txt
+├── full_code_export.txt
+├── full_export_20260701.txt
+├── landlord
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── manage.py
+├── media
+│   └── properties
+│       ├── cards
+│       │   ├── brows sits_card.jpg
+│       │   ├── classic_card.jpg
+│       │   ├── cools_card.jpg
+│       │   ├── cream_card.jpg
+│       │   ├── creams_card.jpg
+│       │   ├── dark_card.jpg
+│       │   ├── Dark kitchen01_card.jpg
+│       │   ├── golden_card.jpg
+│       │   ├── green_card.jpg
+│       │   ├── green seats_card.jpg
+│       │   ├── grey_card.jpg
+│       │   ├── luxury coach_card.jpg
+│       │   ├── mansion white_card.jpg
+│       │   ├── modern best bed_card.jpg
+│       │   ├── modern clean_card.jpg
+│       │   ├── modern cream_card.jpg
+│       │   ├── modern white_card.jpg
+│       │   ├── normal_card.jpg
+│       │   ├── old brown_card.jpg
+│       │   ├── open d_card.jpg
+│       │   ├── open grey_card.jpg
+│       │   ├── pexels-artbovich-6585765_card.jpg
+│       │   ├── pexels-artbovich-6899357_card.jpg
+│       │   ├── pexels-artbovich-6920610_card.jpg
+│       │   ├── pexels-artbovich-6957081_card.jpg
+│       │   ├── pexels-artbovich-6980656_card.jpg
+│       │   ├── pexels-artbovich-7031840_card.jpg
+│       │   ├── pexels-artbovich-7045908_card.jpg
+│       │   ├── pexels-artbovich-7174106_card.jpg
+│       │   ├── pexels-artbovich-7534564_card.jpg
+│       │   ├── pexels-artbovich-7587470_card.jpg
+│       │   ├── pexels-artbovich-7746620_card.jpg
+│       │   ├── pexels-artbovich-8082332_card.jpg
+│       │   ├── pexels-artbovich-8089092_card.jpg
+│       │   ├── pexels-artbovich-8134817_card.jpg
+│       │   ├── pexels-baris-turkoz-214377915-17603678_card.jpg
+│       │   ├── pexels-creative-vix-7283_card.jpg
+│       │   ├── pexels-helloaesthe-17893369_card.jpg
+│       │   ├── pexels-jan-wright-2156785233-37144291_card.jpg
+│       │   ├── pexels-laura-paredis-1047081-21253736_card.jpg
+│       │   ├── pexels-lena-netkach-395486-37977690_card.jpg
+│       │   ├── pexels-moklebust-13865602_card.jpg
+│       │   ├── pexels-nadin-sh-78971847-17869820_card.jpg
+│       │   ├── pexels-oktay-koseoglu-42034955-26664376_card.jpg
+│       │   ├── pexels-orlovamaria-4913326_card.jpg
+│       │   ├── pexels-phuongduy-le-3408794-7998657_card.jpg
+│       │   ├── pexels-piotr-wojnowski-2767306-29821815_card.jpg
+│       │   ├── pexels-strannik-sk-36979142_card.jpg
+│       │   ├── pexels-toulouse-12235857_card.jpg
+│       │   ├── pexels-winnie-kerubo-296479038-13278911_card.jpg
+│       │   ├── pure white_card.jpg
+│       │   ├── stylish_card.jpg
+│       │   ├── white01_card.jpg
+│       │   ├── white clean_card.jpg
+│       │   ├── whitees_card.jpg
+│       │   ├── white round_card.jpg
+│       │   ├── wood_card.jpg
+│       │   ├── wood kitchen_card.jpg
+│       │   └── woods_card.jpg
+│       ├── hero
+│       │   ├── brows sits_hero.jpg
+│       │   ├── classic_hero.jpg
+│       │   ├── cools_hero.jpg
+│       │   ├── cream_hero.jpg
+│       │   ├── creams_hero.jpg
+│       │   ├── dark_hero.jpg
+│       │   ├── Dark kitchen01_hero.jpg
+│       │   ├── golden_hero.jpg
+│       │   ├── green_hero.jpg
+│       │   ├── green seats_hero.jpg
+│       │   ├── grey_hero.jpg
+│       │   ├── luxury coach_hero.jpg
+│       │   ├── mansion white_hero.jpg
+│       │   ├── modern best bed_hero.jpg
+│       │   ├── modern clean_hero.jpg
+│       │   ├── modern cream_hero.jpg
+│       │   ├── modern white_hero.jpg
+│       │   ├── normal_hero.jpg
+│       │   ├── old brown_hero.jpg
+│       │   ├── open d_hero.jpg
+│       │   ├── open grey_hero.jpg
+│       │   ├── pexels-artbovich-6585765_hero.jpg
+│       │   ├── pexels-artbovich-6899357_hero.jpg
+│       │   ├── pexels-artbovich-6920610_hero.jpg
+│       │   ├── pexels-artbovich-6957081_hero.jpg
+│       │   ├── pexels-artbovich-6980656_hero.jpg
+│       │   ├── pexels-artbovich-7031840_hero.jpg
+│       │   ├── pexels-artbovich-7045908_hero.jpg
+│       │   ├── pexels-artbovich-7174106_hero.jpg
+│       │   ├── pexels-artbovich-7534564_hero.jpg
+│       │   ├── pexels-artbovich-7587470_hero.jpg
+│       │   ├── pexels-artbovich-7746620_hero.jpg
+│       │   ├── pexels-artbovich-8082332_hero.jpg
+│       │   ├── pexels-artbovich-8089092_hero.jpg
+│       │   ├── pexels-artbovich-8134817_hero.jpg
+│       │   ├── pexels-baris-turkoz-214377915-17603678_hero.jpg
+│       │   ├── pexels-creative-vix-7283_hero.jpg
+│       │   ├── pexels-helloaesthe-17893369_hero.jpg
+│       │   ├── pexels-jan-wright-2156785233-37144291_hero.jpg
+│       │   ├── pexels-laura-paredis-1047081-21253736_hero.jpg
+│       │   ├── pexels-lena-netkach-395486-37977690_hero.jpg
+│       │   ├── pexels-moklebust-13865602_hero.jpg
+│       │   ├── pexels-nadin-sh-78971847-17869820_hero.jpg
+│       │   ├── pexels-oktay-koseoglu-42034955-26664376_hero.jpg
+│       │   ├── pexels-orlovamaria-4913326_hero.jpg
+│       │   ├── pexels-phuongduy-le-3408794-7998657_hero.jpg
+│       │   ├── pexels-piotr-wojnowski-2767306-29821815_hero.jpg
+│       │   ├── pexels-strannik-sk-36979142_hero.jpg
+│       │   ├── pexels-toulouse-12235857_hero.jpg
+│       │   ├── pexels-winnie-kerubo-296479038-13278911_hero.jpg
+│       │   ├── pure white_hero.jpg
+│       │   ├── stylish_hero.jpg
+│       │   ├── white01_hero.jpg
+│       │   ├── white clean_hero.jpg
+│       │   ├── whitees_hero.jpg
+│       │   ├── white round_hero.jpg
+│       │   ├── wood_hero.jpg
+│       │   ├── wood kitchen_hero.jpg
+│       │   └── woods_hero.jpg
+│       ├── karen-aerial-01.jpg
+│       ├── karen-aerial-02.jpg
+│       ├── karen-aerial-03.jpg
+│       ├── karen-aerial-04.jpg
+│       ├── karen-aerial-05.jpg
+│       ├── karen-aerial-06.jpg
+│       ├── karen-family-peaceful-01.jpg
+│       ├── karen-family-peaceful-02.jpg
+│       ├── karen-family-peaceful-03.jpg
+│       ├── karen-family-peaceful-04.jpg
+│       ├── karen-family-peaceful-05.jpg
+│       ├── karen-family-peaceful-06.jpg
+│       ├── karen-family-peaceful-07.jpg
+│       ├── karen-family-peaceful-08.jpg
+│       ├── karen-green-01.jpg
+│       ├── karen-green-02.jpg
+│       ├── karen-green-03.jpg
+│       ├── karen-green-04.jpg
+│       ├── karen-green-05.jpg
+│       ├── karen-green-06.jpg
+│       ├── karen-green-07.jpg
+│       ├── karen-green-08.jpg
+│       ├── karen-green-09.jpg
+│       ├── karen-spacious-01.jpg
+│       ├── karen-spacious-02.jpg
+│       ├── karen-spacious-03.jpg
+│       ├── karen-spacious-04.jpg
+│       ├── karen-spacious-05.jpg
+│       ├── karen-spacious-06.jpg
+│       ├── karen-spacious-07.jpg
+│       ├── karen-spacious-08.jpg
+│       ├── karen-spacious-09.jpg
+│       ├── lavington-established-01.jpg
+│       ├── lavington-established-02.jpg
+│       ├── lavington-established-03.jpg
+│       ├── lavington-established-04.jpg
+│       ├── lavington-established-05.jpg
+│       ├── lavington-established-06.jpg
+│       ├── lavington-established-07.jpg
+│       ├── lavington-established-08.jpg
+│       ├── lavington-established-09.jpg
+│       ├── lavington-luxury-01.jpg
+│       ├── lavington-luxury-02.jpg
+│       ├── lavington-luxury-03.jpg
+│       ├── lavington-luxury-04.jpg
+│       ├── lavington-luxury-05.jpg
+│       ├── lavington-luxury-06.jpg
+│       ├── lavington-luxury-07.jpg
+│       ├── lavington-quiet-01.jpg
+│       ├── lavington-quiet-02.jpg
+│       ├── lavington-quiet-03.jpg
+│       ├── lavington-quiet-04.jpg
+│       ├── lavington-quiet-05.jpg
+│       ├── lavington-quiet-06.jpg
+│       ├── lavington-quiet-07.jpg
+│       ├── lavington-quiet-08.jpg
+│       ├── lavington-quiet-09.jpg
+│       ├── lavington-quiet-10.jpg
+│       ├── property-1.jpg
+│       ├── property-2.jpg
+│       ├── property-3.jpg
+│       ├── thumbnails
+│       │   ├── brows sits_thumb.jpg
+│       │   ├── classic_thumb.jpg
+│       │   ├── cools_thumb.jpg
+│       │   ├── creams_thumb.jpg
+│       │   ├── cream_thumb.jpg
+│       │   ├── Dark kitchen01_thumb.jpg
+│       │   ├── dark_thumb.jpg
+│       │   ├── golden_thumb.jpg
+│       │   ├── green seats_thumb.jpg
+│       │   ├── green_thumb.jpg
+│       │   ├── grey_thumb.jpg
+│       │   ├── luxury coach_thumb.jpg
+│       │   ├── mansion white_thumb.jpg
+│       │   ├── modern best bed_thumb.jpg
+│       │   ├── modern clean_thumb.jpg
+│       │   ├── modern cream_thumb.jpg
+│       │   ├── modern white_thumb.jpg
+│       │   ├── normal_thumb.jpg
+│       │   ├── old brown_thumb.jpg
+│       │   ├── open d_thumb.jpg
+│       │   ├── open grey_thumb.jpg
+│       │   ├── pexels-artbovich-6585765_thumb.jpg
+│       │   ├── pexels-artbovich-6899357_thumb.jpg
+│       │   ├── pexels-artbovich-6920610_thumb.jpg
+│       │   ├── pexels-artbovich-6957081_thumb.jpg
+│       │   ├── pexels-artbovich-6980656_thumb.jpg
+│       │   ├── pexels-artbovich-7031840_thumb.jpg
+│       │   ├── pexels-artbovich-7045908_thumb.jpg
+│       │   ├── pexels-artbovich-7174106_thumb.jpg
+│       │   ├── pexels-artbovich-7534564_thumb.jpg
+│       │   ├── pexels-artbovich-7587470_thumb.jpg
+│       │   ├── pexels-artbovich-7746620_thumb.jpg
+│       │   ├── pexels-artbovich-8082332_thumb.jpg
+│       │   ├── pexels-artbovich-8089092_thumb.jpg
+│       │   ├── pexels-artbovich-8134817_thumb.jpg
+│       │   ├── pexels-baris-turkoz-214377915-17603678_thumb.jpg
+│       │   ├── pexels-creative-vix-7283_thumb.jpg
+│       │   ├── pexels-helloaesthe-17893369_thumb.jpg
+│       │   ├── pexels-jan-wright-2156785233-37144291_thumb.jpg
+│       │   ├── pexels-laura-paredis-1047081-21253736_thumb.jpg
+│       │   ├── pexels-lena-netkach-395486-37977690_thumb.jpg
+│       │   ├── pexels-moklebust-13865602_thumb.jpg
+│       │   ├── pexels-nadin-sh-78971847-17869820_thumb.jpg
+│       │   ├── pexels-oktay-koseoglu-42034955-26664376_thumb.jpg
+│       │   ├── pexels-orlovamaria-4913326_thumb.jpg
+│       │   ├── pexels-phuongduy-le-3408794-7998657_thumb.jpg
+│       │   ├── pexels-piotr-wojnowski-2767306-29821815_thumb.jpg
+│       │   ├── pexels-strannik-sk-36979142_thumb.jpg
+│       │   ├── pexels-toulouse-12235857_thumb.jpg
+│       │   ├── pexels-winnie-kerubo-296479038-13278911_thumb.jpg
+│       │   ├── pure white_thumb.jpg
+│       │   ├── stylish_thumb.jpg
+│       │   ├── white01_thumb.jpg
+│       │   ├── white clean_thumb.jpg
+│       │   ├── whitees_thumb.jpg
+│       │   ├── white round_thumb.jpg
+│       │   ├── wood kitchen_thumb.jpg
+│       │   ├── woods_thumb.jpg
+│       │   └── wood_thumb.jpg
+│       ├── westlands-modern-03.jpg
+│       ├── westlands-urban-01.jpg
+│       ├── westlands-urban-02.jpg
+│       ├── westlands-urban-03.jpg
+│       ├── westlands-urban-04.jpg
+│       ├── westlands-urban-05.jpg
+│       ├── westlands-urban-06.jpg
+│       ├── westlands-urban-07.jpg
+│       ├── westlands-urban-08.jpg
+│       ├── westlands-vibrant-01.jpg
+│       ├── westlands-vibrant-02.jpg
+│       ├── westlands-vibrant-03.jpg
+│       ├── westlands-vibrant-04.jpg
+│       ├── westlands-vibrant-05.jpg
+│       ├── westlands-vibrant-06.jpg
+│       └── westlands-vibrant-07.jpg
+├── project_structure.txt
+├── properties
+│   ├── admin.py
+│   ├── apps.py
+│   ├── filters.py
+│   ├── geocoding.py
+│   ├── __init__.py
+│   ├── location_serializers.py
+│   ├── location_views.py
+│   ├── models.py
+│   ├── pexels-artbovich-7031840_card.jpg
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── README.md
+├── requirements.txt
+├── seed_properties.py
+├── users
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+└── whybuilder_api
+    ├── asgi.py
+    ├── __init__.py
+    ├── settings.py
+    ├── settings.py.backup
+    ├── urls.py
+    └── wsgi.py
+
+30 directories, 319 files
+
+=== BACKEND: properties/models.py ===
+from django.db import models
+from django.conf import settings
+
+class Property(models.Model):
+    landlord = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    
+    address = models.CharField(max_length=255)
+    area = models.CharField(max_length=100)
+    city = models.CharField(max_length=100, default='Nairobi')
+    
+    latitude = models.DecimalField(max_digits=10, decimal_places=7, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=10, decimal_places=7, null=True, blank=True)
+    location_accuracy = models.CharField(
+        max_length=20,
+        choices=[('gps', 'GPS exact'), ('address', 'Address based'), ('manual', 'Manually placed'), ('unknown', 'Unknown')],
+        default='unknown'
+    )
+    
+    price_per_month = models.IntegerField()
+    bedrooms = models.IntegerField()
+    bathrooms = models.DecimalField(max_digits=3, decimal_places=1)
+    size_sqft = models.IntegerField(null=True, blank=True)
+    property_type = models.CharField(max_length=50)
+    
+    safety_score = models.IntegerField(help_text="0-100")
+    noise_level = models.CharField(
+        max_length=20,
+        choices=[('quiet', 'Quiet'), ('moderate', 'Moderate'), ('lively', 'Lively')],
+        default='moderate'
+    )
+    commute_rating = models.IntegerField(help_text="0-100")
+    lifestyle_tags = models.JSONField(default=list)
+    area_insight = models.TextField(blank=True)
+    
+    has_parking = models.BooleanField(default=False)
+    has_security = models.BooleanField(default=False)
+    has_gym = models.BooleanField(default=False)
+    has_pool = models.BooleanField(default=False)
+    has_ac = models.BooleanField(default=False)
+    pet_friendly = models.BooleanField(default=False)
+    
+    listing_status = models.CharField(
+        max_length=20,
+        choices=[('pending', 'Pending'), ('verified', 'Verified'), ('rejected', 'Rejected')],
+        default='pending'
+    )
+    verified_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='properties/', null=True, blank=True)
+    image_url = models.CharField(max_length=500, null=True, blank=True)
+
+    @property
+    def full_address(self):
+        return f"{self.address}, {self.area}, {self.city}"
+
+    @property
+    def has_coordinates(self):
+        return self.latitude is not None and self.longitude is not None
+
+    def __str__(self):
+        return self.title
+
+=== BACKEND: properties/views.py ===
+from django.shortcuts import get_object_or_404
+from rest_framework import generics, permissions, status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from django_filters.rest_framework import DjangoFilterBackend
+from .models import Property
+from .serializers import PropertySerializer
+from .filters import PropertyFilter
+
+class PropertyListView(generics.ListAPIView):
+    queryset = Property.objects.filter(listing_status='verified')
+    serializer_class = PropertySerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = PropertyFilter
+    permission_classes = [permissions.AllowAny]
+
+class PropertyDetailView(generics.RetrieveAPIView):
+    queryset = Property.objects.all()
+    serializer_class = PropertySerializer
+    lookup_field = 'id'
+    permission_classes = [permissions.AllowAny]
+
+class PropertyCreateView(generics.CreateAPIView):
+    queryset = Property.objects.all()
+    serializer_class = PropertySerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(landlord=self.request.user)
+
+class PropertyUpdateView(generics.UpdateAPIView):
+    queryset = Property.objects.all()
+    serializer_class = PropertySerializer
+    lookup_field = 'id'
+    permission_classes = [permissions.IsAuthenticated]
+
+class PropertyDeleteView(generics.DestroyAPIView):
+    queryset = Property.objects.all()
+    lookup_field = 'id'
+    permission_classes = [permissions.IsAuthenticated]
+
+class NeighbourhoodView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, area):
+        properties = Property.objects.filter(
+            area__iexact=area,
+            listing_status='verified'
+        )
+        total = properties.count()
+
+        if total == 0:
+            return Response({
+                'area': area,
+                'listingCount': 0,
+                'avgSafety': 0,
+                'avgCommute': 0,
+                'noiseDistribution': {'quiet': 0, 'moderate': 0, 'lively': 0}
+            })
+
+        from django.db.models import Avg, Count, Q
+
+        stats = properties.aggregate(
+            avg_safety=Avg('safety_score'),
+            avg_commute=Avg('commute_rating'),
+            quiet=Count('id', filter=Q(noise_level='quiet')),
+            moderate=Count('id', filter=Q(noise_level='moderate')),
+            lively=Count('id', filter=Q(noise_level='lively')),
+        )
+
+        return Response({
+            'area': area,
+            'listingCount': total,
+            'avgSafety': round(stats['avg_safety'] or 0, 1),
+            'avgCommute': round(stats['avg_commute'] or 0, 1),
+            'noiseDistribution': {
+                'quiet': stats['quiet'],
+                'moderate': stats['moderate'],
+                'lively': stats['lively'],
+            }
+        })
+
+class HeroSlidesView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        return Response([
+            {
+                "id": 1,
+                "image_url": "/images/hero/karen-peaceful-01.jpg",
+                "area": "Karen, Nairobi",
+                "label": "Family living · Safe · Quiet",
+                "sort_order": 1,
+                "active": True
+            },
+            {
+                "id": 2,
+                "image_url": "/images/hero/westlands-vibrant-01.jpg",
+                "area": "Westlands, Nairobi",
+                "label": "Urban professionals · Connected · Lively",
+                "sort_order": 2,
+                "active": True
+            },
+            {
+                "id": 3,
+                "image_url": "/images/hero/lavington-elegant-01.jpg",
+                "area": "Lavington, Nairobi",
+                "label": "Remote work · Calm streets · Well-served",
+                "sort_order": 3,
+                "active": True
+            }
+        ])
+
+class NeighbourhoodsView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        return Response([
+            {
+                "id": "1",
+                "name": "Westlands",
+                "slug": "westlands",
+                "tag": "Urban professionals",
+                "safetyScore": 88,
+                "noiseLevel": "Lively",
+                "listings": 312,
+                "image_url": "/images/placeholders/property-placeholder.svg",
+                "active": True,
+                "sort_order": 1
+            },
+            {
+                "id": "2",
+                "name": "Karen",
+                "slug": "karen",
+                "tag": "Family living",
+                "safetyScore": 94,
+                "noiseLevel": "Quiet",
+                "listings": 186,
+                "image_url": "/images/placeholders/property-placeholder.svg",
+                "active": True,
+                "sort_order": 2
+            },
+            {
+                "id": "3",
+                "name": "Lavington",
+                "slug": "lavington",
+                "tag": "Remote-work ready",
+                "safetyScore": 91,
+                "noiseLevel": "Quiet",
+                "listings": 224,
+                "image_url": "/images/placeholders/property-placeholder.svg",
+                "active": True,
+                "sort_order": 3
+            }
+        ])
+
+class TrustPillarsView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        return Response([
+            {
+                "id": "1",
+                "icon": "shield",
+                "heading": "Every home. Seen firsthand.",
+                "description": "Properties appear on WhyBuilder only after passing our manual review. No exceptions.",
+                "active": True,
+                "sort_order": 1
+            },
+            {
+                "id": "2",
+                "icon": "database",
+                "heading": "Safety. Noise. Commute. Measured.",
+                "description": "Structured data — not user-generated opinions. Every score is reviewed before a listing goes live.",
+                "active": True,
+                "sort_order": 2
+            },
+            {
+                "id": "3",
+                "icon": "user-check",
+                "heading": "Landlord. ID. History. Verified.",
+                "description": "Every landlord carries a trust score built from verified listings and renter history.",
+                "active": True,
+                "sort_order": 3
+            }
+        ])
+
+class LifestyleCategoriesView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        return Response([
+            {
+                "id": "1",
+                "title": "Quiet living",
+                "slug": "quiet",
+                "headline": "Spaces designed for calmer living",
+                "description": "Low traffic, green surroundings, and peaceful streets. Perfect for focus, rest, and slower routines.",
+                "accentColor": "#10B981",
+                "image_url": "/images/placeholders/property-placeholder.svg",
+                "sceneLabel": "Karen, Nairobi",
+                "sceneDetail": "Morning light on a quiet Karen street",
+                "matchCount": 1243,
+                "active": True,
+                "sort_order": 1
+            },
+            {
+                "id": "2",
+                "title": "Social areas",
+                "slug": "social",
+                "headline": "Where life happens",
+                "description": "Cafés, parks, restaurants, and energy. Walkable neighbourhoods where you're never far from something happening.",
+                "accentColor": "#F59E0B",
+                "image_url": "/images/placeholders/property-placeholder.svg",
+                "sceneLabel": "Westlands, Nairobi",
+                "sceneDetail": "Westlands buzz — cafés, co-working, nightlife",
+                "matchCount": 2341,
+                "active": True,
+                "sort_order": 2
+            },
+            {
+                "id": "3",
+                "title": "Work-friendly",
+                "slug": "work",
+                "headline": "Homes built for focus and flexibility",
+                "description": "Fast internet, quiet interiors, dedicated workspace potential. Designed for remote work and deep focus.",
+                "accentColor": "#1E3A8A",
+                "image_url": "/images/placeholders/property-placeholder.svg",
+                "sceneLabel": "Lavington, Nairobi",
+                "sceneDetail": "Remote work setup with city views",
+                "matchCount": 1892,
+                "active": True,
+                "sort_order": 3
+            }
+        ])
+
+=== BACKEND: properties/serializers.py ===
+from rest_framework import serializers
+from .models import Property
+
+class PropertySerializer(serializers.ModelSerializer):
+    landlord_name = serializers.SerializerMethodField()
+    landlord_email = serializers.SerializerMethodField()
+    image_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Property
+        fields = [
+            'id', 'title', 'description', 'address', 'area', 'city',
+            'latitude', 'longitude', 'location_accuracy',
+            'price_per_month', 'bedrooms', 'bathrooms', 'size_sqft',
+            'property_type', 'safety_score', 'noise_level', 'commute_rating',
+            'lifestyle_tags', 'area_insight', 'listing_status',
+            'has_parking', 'has_security', 'has_gym', 'has_pool',
+            'has_ac', 'pet_friendly', 'created_at', 'verified_at',
+            'landlord_name', 'landlord_email', 'image_url'
+        ]
+
+    def get_landlord_name(self, obj):
+        if obj.landlord:
+            return obj.landlord.get_full_name() or obj.landlord.email
+        return None
+
+    def get_landlord_email(self, obj):
+        if obj.landlord:
+            return obj.landlord.email
+        return None
+
+    def get_image_url(self, obj):
+        request = self.context.get('request')
+        if obj.image and obj.image.name:
+            if request:
+                return request.build_absolute_uri(obj.image.url)
+            return obj.image.url
+        if obj.image_url:
+            return obj.image_url
+        return None
+
+=== BACKEND: properties/urls.py ===
+from django.urls import path
+from . import views
+from .location_views import LocationCaptureView, PropertyLocationUpdateView, AddressGeocodeView
+
+urlpatterns = [
+    path('hero-slides/', views.HeroSlidesView.as_view(), name='hero-slides'),
+    path('neighbourhoods/', views.NeighbourhoodsView.as_view(), name='neighbourhoods'),
+    path('trust-pillars/', views.TrustPillarsView.as_view(), name='trust-pillars'),
+    path('lifestyle-categories/', views.LifestyleCategoriesView.as_view(), name='lifestyle-categories'),
+    path('geocode/', AddressGeocodeView.as_view(), name='address-geocode'),
+    path('location/capture/', LocationCaptureView.as_view(), name='location-capture'),
+    path('neighbourhood/<str:area>/', views.NeighbourhoodView.as_view(), name='neighbourhood'),
+    path('create/', views.PropertyCreateView.as_view(), name='property-create'),
+    path('', views.PropertyListView.as_view(), name='property-list'),
+    path('<str:id>/', views.PropertyDetailView.as_view(), name='property-detail'),
+    path('<str:id>/update/', views.PropertyUpdateView.as_view(), name='property-update'),
+    path('<str:property_id>/location/', PropertyLocationUpdateView.as_view(), name='property-location-update'),
+    path('<str:id>/delete/', views.PropertyDeleteView.as_view(), name='property-delete'),
+]
+
+=== BACKEND: whybuilder_api/settings.py ===
+import os
+from pathlib import Path
+from datetime import timedelta
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+SECRET_KEY = 'WhyBuilder@2026-secret-key-change-in-production'
+
+DEBUG = True
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.*', '0.0.0.0']
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'corsheaders',
+    'django_filters',
+    
+    'users',
+    'properties',
+    'landlord',
+]
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+ROOT_URLCONF = 'whybuilder_api.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+WSGI_APPLICATION = 'whybuilder_api.wsgi.application'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'whybuilder',
+        'USER': 'whybuilder',
+        'PASSWORD': 'WhyBuilder2026',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+AUTH_PASSWORD_VALIDATORS = [
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+]
+
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'Africa/Nairobi'
+USE_I18N = True
+USE_TZ = True
+
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'http://127.0.0.1:5173',
+]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ),
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20,
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+    'ROTATE_REFRESH_TOKENS': False,
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
+AUTH_USER_MODEL = 'users.User'
+=== BACKEND: whybuilder_api/urls.py ===
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/properties/', include('properties.urls')),
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+=== BACKEND: users/models.py ===
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+class User(AbstractUser):
+    ACCOUNT_TYPES = [
+        ('renter', 'Renter'),
+        ('landlord', 'Landlord'),
+        ('administrator', 'Administrator'),
+    ]
+    
+    account_type = models.CharField(max_length=20, choices=ACCOUNT_TYPES, default='renter')
+    trust_score = models.IntegerField(default=50)
+    phone_number = models.CharField(max_length=15, blank=True)
+    business_name = models.CharField(max_length=100, blank=True)
+    response_rate = models.IntegerField(default=0)
+    total_listings = models.IntegerField(default=0)
+    verified_listings_count = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.email
+
+=== BACKEND: landlord/models.py ===
+from django.db import models
+from django.conf import settings
+
+class LandlordProfile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    business_name = models.CharField(max_length=100, blank=True)
+    phone_number = models.CharField(max_length=15, blank=True)
+    trust_score = models.IntegerField(default=50)
+    response_rate = models.IntegerField(default=0)
+    total_listings = models.IntegerField(default=0)
+    verified_listings_count = models.IntegerField(default=0)
+    member_since = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.user.email
+
+=== FRONTEND: src/app/App.tsx ===
+import { RouterProvider } from "react-router";
+import { CurrencyProvider } from "../context/CurrencyContext";
+import { ThemeProvider } from "../context/ThemeContext";
+import { router } from "./routes";
+
+function App() {
+  return (
+    <ThemeProvider>
+      <CurrencyProvider>
+        <RouterProvider router={router} />
+      </CurrencyProvider>
+    </ThemeProvider>
+  );
+}
+
+export default App;
+
+=== FRONTEND: src/app/routes.tsx ===
+import { createBrowserRouter } from "react-router";
+import Root from "./pages/Root";
+import Home from "./pages/Home";
+import PropertyDetail from "./pages/PropertyDetail";
+import Browse from "./pages/Browse";
+import Auth from "./pages/Auth";
+import ForgotPassword from "./pages/ForgotPassword";
+import UserAccount from "./pages/UserAccount";
+import LandlordProfile from "./pages/LandlordProfile";
+import LandlordDashboard from "./pages/LandlordDashboard";
+import ListingSubmission from "./pages/ListingSubmission";
+import AdminDashboard from "./pages/AdminDashboard";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Root,
+    children: [
+      { index: true, Component: Home },
+      { path: "browse", Component: Browse },
+      { path: "property/:id", Component: PropertyDetail },
+      { path: "landlord/:id", Component: LandlordProfile },
+      { path: "about", Component: About },
+      { path: "auth", Component: Auth },
+      { path: "forgot-password", Component: ForgotPassword },
+      { path: "*", Component: NotFound },
+
+      {
+        path: "account",
+        Component: () => (
+          <ProtectedRoute allowedRoles={["renter"]}>
+            <UserAccount />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "dashboard",
+        Component: () => (
+          <ProtectedRoute allowedRoles={["landlord"]}>
+            <LandlordDashboard />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "submit",
+        Component: () => (
+          <ProtectedRoute allowedRoles={["landlord"]}>
+            <ListingSubmission />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "admin",
+        Component: () => (
+          <ProtectedRoute allowedRoles={["administrator"]}>
+            <AdminDashboard />
+          </ProtectedRoute>
+        ),
+      },
+    ],
+  },
+]);
+
+=== FRONTEND: src/app/pages/Home.tsx ===
+import { HeroSection } from "../components/features/home/HeroSection";
+import FeaturedProperties from "../components/features/home/FeaturedProperties";
+import { Seo } from "../components/Seo";
+
+export default function Home() {
+  return (
+    <>
+      <Seo
+        title="Home"
+        description="Find verified homes in Nairobi with safety scores, noise ratings, and commute data."
+      />
+      <HeroSection />
+      <FeaturedProperties />
+    </>
+  );
+}
+
+=== FRONTEND: src/app/pages/Browse.tsx ===
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router";
+import { Icons } from "../components/Icon";
+import { properties, type Property } from "../../lib/api";
+import { PropertyCard } from "../components/PropertyCard";
+import { Seo } from "../components/Seo";
+
+const AREAS = ["Westlands", "Kilimani", "Karen", "Lavington", "Ngong Road", "Upperhill"];
+const NOISE_LEVELS = ["Quiet", "Moderate", "Lively"];
+const LIFESTYLE_TAGS = ["Quiet living", "Social areas", "Work-friendly zones"];
+const BUDGET_MIN = 20000;
+const BUDGET_MAX = 300000;
+
+function Pill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-150 ${
+        active
+          ? "border-secondary bg-secondary/15 text-secondary scale-105"
+          : "border-white/10 bg-white/5 text-white/60 hover:border-white/25"
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
+function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary/15 border border-secondary/30 text-secondary text-xs font-medium">
+      {label}
+      <button onClick={onRemove} className="text-secondary/70 hover:text-secondary">
+        <Icons.X size={12} />
+      </button>
+    </span>
+  );
+}
+
+function formatKES(amount: number): string {
+  return `KES ${amount.toLocaleString()}`;
+}
+
+export default function Browse() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [allProperties, setAllProperties] = useState<Property[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
+
+  const [area, setArea] = useState(searchParams.get("area") || "");
+  const [noise, setNoise] = useState(searchParams.get("noise") || "");
+  const [lifestyle, setLifestyle] = useState(searchParams.get("lifestyle") || "");
+  const [minBudget, setMinBudget] = useState(() => {
+    const val = searchParams.get("minBudget");
+    return val ? Number(val) : BUDGET_MIN;
+  });
+  const [maxBudget, setMaxBudget] = useState(() => {
+    const val = searchParams.get("maxBudget");
+    return val ? Number(val) : BUDGET_MAX;
+  });
+
+  const activeCount = [area, noise, lifestyle, minBudget > BUDGET_MIN ? "min" : "", maxBudget < BUDGET_MAX ? "max" : ""].filter(Boolean).length;
+  const hasFilters = activeCount > 0;
+
+  async function loadProperties() {
+    setLoading(true);
+    setError(null);
+    const { data, error: fetchError } = await properties.list({
+      area: area || undefined,
+      noise: noise || undefined,
+      lifestyle: lifestyle || undefined,
+      minBudget: minBudget > BUDGET_MIN ? minBudget : undefined,
+      maxBudget: maxBudget < BUDGET_MAX ? maxBudget : undefined,
+    });
+    if (fetchError) setError(fetchError);
+    else setAllProperties(data);
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    loadProperties();
+    const params = new URLSearchParams();
+    if (area) params.set("area", area);
+    if (noise) params.set("noise", noise);
+    if (lifestyle) params.set("lifestyle", lifestyle);
+    if (minBudget > BUDGET_MIN) params.set("minBudget", String(minBudget));
+    if (maxBudget < BUDGET_MAX) params.set("maxBudget", String(maxBudget));
+    setSearchParams(params, { replace: true });
+  }, [area, noise, lifestyle, minBudget, maxBudget]);
+
+  function clearFilters() {
+    setArea(""); setNoise(""); setLifestyle("");
+    setMinBudget(BUDGET_MIN);
+    setMaxBudget(BUDGET_MAX);
+  }
+
+  return (
+    <>
+      <Seo
+        title="Browse Verified Homes"
+        description="Browse verified rental properties in Nairobi with transparent safety scores, noise levels, and landlord trust ratings."
+      />
+      <div className="min-h-screen bg-[var(--color-dark-bg)]">
+        <div className="bg-gradient-to-b from-[var(--color-dark-surface)] to-[var(--color-dark-bg)] border-b border-white/10 pb-0">
+          <div className="container-custom pt-10 pb-0">
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-2">
+                <Icons.ShieldCheck size={14} className="text-secondary" />
+                <span className="text-[10px] font-semibold text-secondary uppercase tracking-wider">
+                  Verified listings
+                </span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white/95 tracking-tight">
+                Browse verified homes
+              </h1>
+              <p className="text-sm text-white/40 mt-1">
+                {loading ? "Loading homes..." : `${allProperties.length} verified ${allProperties.length === 1 ? "home" : "homes"}`}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2.5 flex-wrap pb-5">
+              <button
+                onClick={() => setShowFilters(s => !s)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-all duration-150 ${
+                  showFilters
+                    ? "border-primary/60 bg-primary/30 text-blue-300"
+                    : "border-white/10 bg-white/5 text-white/70 hover:bg-white/10"
+                }`}
+              >
+                <Icons.Sliders size={14} />
+                Filters
+                {activeCount > 0 && (
+                  <span className="w-[18px] h-[18px] rounded-full bg-secondary text-white text-[10px] font-bold flex items-center justify-center">
+                    {activeCount}
+                  </span>
+                )}
+              </button>
+
+              {area && <ActiveChip label={area} onRemove={() => setArea("")} />}
+              {noise && <ActiveChip label={noise} onRemove={() => setNoise("")} />}
+              {lifestyle && <ActiveChip label={lifestyle} onRemove={() => setLifestyle("")} />}
+              {minBudget > BUDGET_MIN && <ActiveChip label={`Min ${formatKES(minBudget)}`} onRemove={() => setMinBudget(BUDGET_MIN)} />}
+              {maxBudget < BUDGET_MAX && <ActiveChip label={`Max ${formatKES(maxBudget)}`} onRemove={() => setMaxBudget(BUDGET_MAX)} />}
+
+              {hasFilters && (
+                <button
+                  onClick={clearFilters}
+                  className="text-xs text-white/30 underline hover:text-white/50 bg-transparent border-none cursor-pointer p-0"
+                >
+                  Clear all
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {showFilters && (
+          <div className="bg-white/5 border-b border-white/10">
+            <div className="container-custom py-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                  <p className="text-[10px] font-semibold text-white/35 uppercase tracking-wider mb-3">Area</p>
+                  <div className="flex flex-wrap gap-2">
+                    {AREAS.map(a => <Pill key={a} label={a} active={area === a} onClick={() => setArea(area === a ? "" : a)} />)}
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-[10px] font-semibold text-white/35 uppercase tracking-wider mb-3">Noise level</p>
+                  <div className="flex flex-wrap gap-2">
+                    {NOISE_LEVELS.map(n => <Pill key={n} label={n} active={noise === n} onClick={() => setNoise(noise === n ? "" : n)} />)}
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-[10px] font-semibold text-white/35 uppercase tracking-wider mb-3">Lifestyle</p>
+                  <div className="flex flex-wrap gap-2">
+                    {LIFESTYLE_TAGS.map(l => <Pill key={l} label={l} active={lifestyle === l} onClick={() => setLifestyle(lifestyle === l ? "" : l)} />)}
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-[10px] font-semibold text-white/35 uppercase tracking-wider mb-3">Budget (KES/month)</p>
+                  <div className="py-2">
+                    <div className="flex justify-between text-xs text-white/50 mb-2">
+                      <span>Min: {formatKES(minBudget)}</span>
+                      <span>Max: {maxBudget >= BUDGET_MAX ? "No limit" : formatKES(maxBudget)}</span>
+                    </div>
+                    <div className="mb-4">
+                      <label className="text-[11px] text-white/40 block mb-1.5">Minimum rent</label>
+                      <input
+                        type="range"
+                        min={BUDGET_MIN}
+                        max={BUDGET_MAX}
+                        step={5000}
+                        value={minBudget}
+                        onChange={e => { const v = Number(e.target.value); if (v <= maxBudget) setMinBudget(v); }}
+                        className="w-full accent-secondary"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[11px] text-white/40 block mb-1.5">Maximum rent</label>
+                      <input
+                        type="range"
+                        min={BUDGET_MIN}
+                        max={BUDGET_MAX}
+                        step={5000}
+                        value={maxBudget}
+                        onChange={e => { const v = Number(e.target.value); if (v >= minBudget) setMaxBudget(v); }}
+                        className="w-full accent-secondary"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="container-custom py-8 pb-20">
+          {loading && (
+            <div className="flex items-center justify-center py-20 gap-2.5 text-white/30">
+              <Icons.Loader2 size={18} className="animate-spin" />
+              <span className="text-sm">Loading homes...</span>
+            </div>
+          )}
+
+          {error && !loading && (
+            <div className="text-center py-20">
+              <p className="text-red-500 text-sm mb-4">{error}</p>
+              <button onClick={loadProperties} className="px-5 py-2 bg-primary text-white rounded-lg text-sm cursor-pointer hover:bg-primary/90">
+                Try again
+              </button>
+            </div>
+          )}
+
+          {!loading && !error && allProperties.length === 0 && (
+            <div className="text-center py-20">
+              <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-5">
+                <Icons.Search size={22} className="text-white/20" />
+              </div>
+              <p className="text-lg font-medium text-white/50 mb-1.5">
+                {hasFilters ? "No homes match these preferences." : "No verified listings yet."}
+              </p>
+              <p className="text-sm text-white/25 mb-6">
+                {hasFilters ? "Try adjusting your filters." : "Check back soon — listings are reviewed daily."}
+              </p>
+              {hasFilters && (
+                <button
+                  onClick={clearFilters}
+                  className="px-6 py-2.5 rounded-lg bg-white/10 border border-white/10 text-white/60 text-sm font-medium hover:bg-white/15 transition-all"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
+          )}
+
+          {!loading && !error && allProperties.length > 0 && (
+            <>
+              <p className="text-[11px] text-white/25 mb-5 tracking-wide">
+                {allProperties.length} {allProperties.length === 1 ? "result" : "results"}
+                {hasFilters ? " · filtered" : ""}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {allProperties.map(property => (
+                  <PropertyCard key={property.id} property={property} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
+=== FRONTEND: src/app/pages/PropertyDetail.tsx ===
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router";
+import { getImageUrl, PLACEHOLDER_IMAGE, properties as apiProperties } from "../../lib/api";
+import { useCurrencyContext } from "../context/CurrencyContext";
+import { useSavedProperties } from "../hooks/useSavedProperties";
+import { ContactModal } from "../components/ContactModal";
+import { PropertyMap } from "../components/PropertyMap";
+import { LoadingSpinner } from "../components/LoadingSpinner";
+import { ErrorMessage } from "../components/ErrorMessage";
+import {
+  Bed, Bath, Maximize, ShieldCheck, Volume2, Zap, MapPin, Home,
+  Heart, Phone, Mail, Star, Trees, Car, Users, Building2, CalendarDays, BadgeCheck, VolumeX, Volume, Volume1,
+} from "lucide-react";
+
+interface PropertyImage {
+  id: string;
+  image_url: string;
+  display_order: number;
+}
+
+interface LandlordProfile {
+  id: string;
+  full_name: string;
+  email: string;
+  phone_number?: string;
+  trust_score?: number;
+}
+
+interface PropertyDetailData {
+  id: string;
+  title: string;
+  description: string;
+  address: string;
+  area: string;
+  city: string;
+  price_per_month: number;
+  bedrooms: number;
+  bathrooms: number;
+  size_sqft: number | null;
+  property_type: string;
+  listing_status: string;
+  safety_score: number;
+  noise_level: string;
+  commute_rating: number;
+  lifestyle_tags: string[];
+  area_insight: string;
+  created_at: string;
+  verified_at: string | null;
+  landlord_id: string;
+  users?: LandlordProfile;
+  property_images?: PropertyImage[];
+}
+
+const getNoiseIcon = (level: string) => {
+  switch (level.toLowerCase()) {
+    case "quiet": return VolumeX;
+    case "moderate": return Volume1;
+    case "lively": return Volume;
+    default: return Volume1;
+  }
+};
+
+const getNoiseColor = (level: string) => {
+  switch (level.toLowerCase()) {
+    case "quiet": return "from-green-50 to-emerald-50 border-green-100 text-green-700";
+    case "moderate": return "from-amber-50 to-yellow-50 border-amber-100 text-amber-700";
+    case "lively": return "from-orange-50 to-red-50 border-orange-100 text-orange-700";
+    default: return "from-gray-50 to-gray-100 border-gray-100 text-gray-700";
+  }
+};
+
+const getNoiseBgIcon = (level: string) => {
+  switch (level.toLowerCase()) {
+    case "quiet": return "bg-green-100";
+    case "moderate": return "bg-amber-100";
+    case "lively": return "bg-orange-100";
+    default: return "bg-gray-100";
+  }
+};
+
+export default function PropertyDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { format } = useCurrencyContext();
+  const { isSaved, toggleSave } = useSavedProperties();
+  const [property, setProperty] = useState<PropertyDetailData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    async function fetchProperty() {
+      if (!id) {
+        setError("No property ID provided");
+        setLoading(false);
+        return;
+      }
+
+      const { data, error: fetchError } = await apiProperties.get(id);
+      if (fetchError || !data) {
+        setError(fetchError || "Property not found");
+        setLoading(false);
+        return;
+      }
+
+      const typedData = data as PropertyDetailData;
+      setProperty(typedData);
+      if (typedData.property_images && typedData.property_images.length > 0) {
+        const sorted = [...typedData.property_images].sort((a, b) => a.display_order - b.display_order);
+        setSelectedImage(sorted[0].image_url);
+      } else if ((typedData as any).image_url) {
+        setSelectedImage((typedData as any).image_url);
+      }
+      setLoading(false);
+    }
+
+    fetchProperty();
+  }, [id]);
+
+  const handleSave = async () => {
+    if (!property) return;
+    setSaving(true);
+    await toggleSave(property.id);
+    setSaving(false);
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <LoadingSpinner size="lg" message="Loading property details..." />
+      </div>
+    );
+  }
+
+  if (error || !property) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+        <ErrorMessage message={error || "Property not found"} onRetry={() => window.location.reload()} />
+      </div>
+    );
+  }
+
+  const NoiseIcon = getNoiseIcon(property.noise_level);
+  const saved = isSaved(property.id);
+  const formattedDate = new Date(property.created_at).toLocaleDateString("en-KE", {
+    year: "numeric",
+    month: "long",
+  });
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pb-16">
+      {showContactModal && property.users && (
+        <ContactModal
+          landlord={{
+            id: property.users.id,
+            full_name: property.users.full_name || "Landlord",
+            phone_number: property.users.phone_number,
+            email: property.users.email,
+          }}
+          propertyTitle={property.title}
+          onClose={() => setShowContactModal(false)}
+        />
+      )}
+
+      <div className="relative h-[500px] md:h-[600px] bg-gray-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10" />
+        <img
+          src={getImageUrl(selectedImage)}
+          alt={property.title}
+          className="w-full h-full object-cover"
+          onError={(e) => { (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE; }}
+        />
+
+        {property.property_images && property.property_images.length > 1 && (
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-3 bg-black/50 backdrop-blur-md p-2 rounded-2xl overflow-x-auto max-w-[90vw]">
+            {property.property_images.map((img, idx) => (
+              <button
+                key={img.id}
+                onClick={() => setSelectedImage(img.image_url)}
+                className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-200 flex-shrink-0 ${
+                  selectedImage === img.image_url ? "border-primary shadow-lg" : "border-white/30 hover:border-white/60"
+                }`}
+              >
+                <img
+                  src={getImageUrl(img.image_url)}
+                  alt={`View ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                  onError={(e) => { (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE; }}
+                />
+              </button>
+            ))}
+          </div>
+        )}
+
+        {property.listing_status === "verified" && (
+          <div className="absolute top-6 left-6 z-20 flex items-center gap-2 bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-full">
+            <BadgeCheck className="w-5 h-5 text-secondary" />
+            <span className="text-sm font-medium">Verified by WhyBuilder</span>
+          </div>
+        )}
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 relative z-20">
+        <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-8">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-3">{property.title}</h1>
+              <div className="flex items-center gap-2 text-gray-500">
+                <MapPin className="w-4 h-4" />
+                <span>{property.address}, {property.area}, {property.city}</span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl px-6 py-4 text-center shadow-lg">
+              <div className="text-3xl font-bold">{format(property.price_per_month)}</div>
+              <div className="text-sm text-white/70">per month</div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {[
+              { icon: Bed, label: "Bedrooms", value: property.bedrooms === 0 ? "Studio" : `${property.bedrooms} Bed${property.bedrooms !== 1 ? "s" : ""}` },
+              { icon: Bath, label: "Bathrooms", value: `${property.bathrooms} Bath${property.bathrooms !== 1 ? "s" : ""}` },
+              { icon: Maximize, label: "Size", value: property.size_sqft ? `${property.size_sqft.toLocaleString()} sqft` : "N/A" },
+              { icon: Building2, label: "Property Type", value: property.property_type },
+            ].map(({ icon: Icon, label, value }) => (
+              <div key={label} className="bg-gray-50 rounded-xl p-4 text-center hover:bg-gray-100 transition-colors">
+                <Icon className="w-6 h-6 mx-auto mb-2 text-primary" strokeWidth={1.5} />
+                <div className="font-semibold text-gray-900">{value}</div>
+                <div className="text-xs text-gray-500">{label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mb-10">
+            <h2 className="text-2xl font-serif font-semibold text-gray-900 mb-5 flex items-center gap-2">
+              <ShieldCheck className="w-6 h-6 text-primary" strokeWidth={1.5} />
+              Decision Data
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 p-5 border border-secondary/20">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-secondary/10 rounded-full blur-2xl" />
+                <ShieldCheck className="w-8 h-8 text-secondary mb-3" strokeWidth={1.5} />
+                <div className="text-4xl font-bold text-secondary mb-1">{property.safety_score}</div>
+                <div className="text-sm text-gray-600">Safety Score</div>
+                <div className="text-xs text-gray-400 mt-2">out of 100 · Area crime data verified</div>
+              </div>
+
+              <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br p-5 border ${getNoiseColor(property.noise_level)}`}>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-current/10 rounded-full blur-2xl" />
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${getNoiseBgIcon(property.noise_level)}`}>
+                  <NoiseIcon className="w-5 h-5" strokeWidth={1.5} />
+                </div>
+                <div className="text-2xl font-bold capitalize">{property.noise_level}</div>
+                <div className="text-sm text-current/70">Noise Level</div>
+                <div className="text-xs text-current/50 mt-2">Daily area assessment</div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 p-5 border border-primary/20">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-primary/10 rounded-full blur-2xl" />
+                <Zap className="w-8 h-8 text-primary mb-3" strokeWidth={1.5} />
+                <div className="text-4xl font-bold text-primary mb-1">{property.commute_rating}</div>
+                <div className="text-sm text-gray-600">Commute Rating</div>
+                <div className="text-xs text-gray-400 mt-2">Access to matatu routes & highways</div>
+              </div>
+            </div>
+          </div>
+
+          {property.lifestyle_tags && property.lifestyle_tags.length > 0 && (
+            <div className="mb-10">
+              <h2 className="text-2xl font-serif font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                <Heart className="w-6 h-6 text-secondary" strokeWidth={1.5} />
+                Lifestyle Match
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {property.lifestyle_tags.map((tag, idx) => {
+                  const tagIcon = tag.includes("Quiet") ? Trees : tag.includes("Social") ? Users : tag.includes("Work") ? Zap : Home;
+                  return (
+                    <span key={idx} className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm">
+                      {tagIcon === Trees && <Trees className="w-3.5 h-3.5 text-green-600" />}
+                      {tagIcon === Users && <Users className="w-3.5 h-3.5 text-amber-600" />}
+                      {tagIcon === Zap && <Zap className="w-3.5 h-3.5 text-blue-600" />}
+                      {tagIcon === Home && <Home className="w-3.5 h-3.5 text-primary" />}
+                      {tag}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {property.area_insight && (
+            <div className="mb-10 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
+              <h2 className="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                <Trees className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                Area Insight
+              </h2>
+              <p className="text-gray-700 leading-relaxed">{property.area_insight}</p>
+            </div>
+          )}
+
+          <div className="mb-10">
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">Description</h2>
+            <p className="text-gray-600 leading-relaxed">{property.description || "No description provided."}</p>
+          </div>
+
+          {property.address && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <Car className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                Location
+              </h2>
+              <PropertyMap address={property.address} area={property.area} city={property.city} />
+            </div>
+          )}
+
+          {property.users && (
+            <div className="border-t border-gray-100 pt-8 mb-10">
+              <h2 className="text-xl font-semibold text-gray-900 mb-5 flex items-center gap-2">
+                <Users className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                Listed By
+              </h2>
+              <div className="flex items-center justify-between flex-wrap gap-4 p-5 bg-gray-50 rounded-2xl">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center shadow-md">
+                    <span className="text-white font-semibold text-xl">
+                      {property.users.full_name?.charAt(0).toUpperCase() || "?"}
+                    </span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900 text-lg">{property.users.full_name || "Landlord"}</div>
+                    {property.users.trust_score && (
+                      <div className="flex items-center gap-1 text-sm text-secondary mt-0.5">
+                        <Star className="w-3.5 h-3.5 fill-secondary text-secondary" />
+                        Trust Score: {property.users.trust_score}%
+                      </div>
+                    )}
+                    <div className="flex items-center gap-1 text-xs text-gray-400 mt-0.5">
+                      <CalendarDays className="w-3 h-3" />
+                      Member since {formattedDate}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  {property.users.email && (
+                    <a
+                      href={`mailto:${property.users.email}`}
+                      className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl text-gray-600 text-sm hover:border-primary hover:text-primary transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      Email
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className="border-t border-gray-100 pt-8 flex flex-col sm:flex-row gap-4">
+            <button
+              onClick={() => setShowContactModal(true)}
+              className="flex items-center justify-center gap-2 flex-1 bg-gradient-to-r from-primary to-primary-dark text-white py-3.5 rounded-xl font-semibold hover:shadow-lg transition-all duration-200"
+            >
+              <Phone className="w-5 h-5" />
+              Contact Landlord
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              className={`flex items-center justify-center gap-2 flex-1 py-3.5 rounded-xl font-semibold transition-all duration-200 border-2 ${
+                saved
+                  ? "border-red-500 text-red-500 bg-red-50 hover:bg-red-100"
+                  : "border-gray-300 text-gray-700 hover:border-primary hover:text-primary hover:bg-primary/5"
+              }`}
+            >
+              <Heart className={`w-5 h-5 ${saved ? "fill-red-500 text-red-500" : ""}`} />
+              {saving ? "Saving..." : (saved ? "Saved" : "Save Property")}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+=== FRONTEND: src/app/pages/LandlordDashboard.tsx ===
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router";
+import { Plus, ShieldCheck, Clock, XCircle, BarChart2, LogOut, HomeIcon, MessageCircle } from "lucide-react";
+import { getImageUrl, PLACEHOLDER_IMAGE } from "../../lib/api";
+import { getCurrentUser, signOut } from "../../lib/auth";
+import { fetchLandlordProperties } from "../../lib/properties";
+import type { ListingStatus } from "../../lib/database.types";
+
+interface LandlordProperty {
+  id: string;
+  title: string;
+  address: string;
+  area: string;
+  city: string;
+  price_per_month: number;
+  listing_status: ListingStatus;
+  image_url: string | null;
+}
+
+function statusConfig(status: ListingStatus) {
+  const configs = {
+    verified: { label: "Verified", icon: ShieldCheck, className: "bg-secondary/10 text-secondary" },
+    pending: { label: "Pending review", icon: Clock, className: "bg-amber-50 text-amber-600" },
+    rejected: { label: "Rejected", icon: XCircle, className: "bg-red-50 text-red-500" },
+  };
+  return configs[status];
+}
+
+export default function LandlordDashboard() {
+  const navigate = useNavigate();
+  const [userName, setUserName] = useState("there");
+  const [loggingOut, setLoggingOut] = useState(false);
+  const [listings, setListings] = useState<LandlordProperty[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [landlordWhatsApp, setLandlordWhatsApp] = useState<string | null>(null);
+  const [landlordPhone, setLandlordPhone] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function loadDashboard() {
+      const user = await getCurrentUser();
+      if (!user) {
+        navigate("/auth?mode=login");
+        return;
+      }
+      setUserName(user.full_name.split(" ")[0]);
+
+      // Fetch landlord contact info
+      try {
+        const token = localStorage.getItem("whybuilder_token");
+        const res = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:8000/api"}/landlord/contact`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setLandlordWhatsApp(data.phone_number ? `https://wa.me/${data.phone_number.replace(/\D/g, "")}` : null);
+          setLandlordPhone(data.phone_number);
+        }
+      } catch (err) {
+        console.error("Failed to load contact info:", err);
+      }
+
+      const { data, error } = await fetchLandlordProperties(user.id);
+      if (!error && data) {
+        const formattedListings: LandlordProperty[] = data.map((p: any) => ({
+          id: p.id,
+          title: p.title,
+          address: p.address,
+          area: p.area,
+          city: p.city,
+          price_per_month: p.price_per_month,
+          listing_status: p.listing_status,
+          image_url: p.image_url || null,
+        }));
+        setListings(formattedListings);
+      }
+      setLoading(false);
+    }
+
+    loadDashboard();
+  }, [navigate]);
+
+  async function handleSignOut() {
+    setLoggingOut(true);
+    await signOut();
+    navigate("/");
+  }
+
+  const verifiedCount = listings.filter((l) => l.listing_status === "verified").length;
+  const pendingCount = listings.filter((l) => l.listing_status === "pending").length;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+          <p className="text-gray-500 text-sm">Loading your listings...</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="bg-gradient-to-r from-primary to-primary-dark text-white py-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h1 className="text-3xl font-serif mb-1">My listings</h1>
+            <p className="text-white/70 text-sm">Hello, {userName} — manage your properties here</p>
+          </div>
+          <div className="flex items-center gap-4">
+            {landlordWhatsApp && (
+              <a
+                href={landlordWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp Support
+              </a>
+            )}
+            <Link
+              to="/submit"
+              className="flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg text-sm hover:bg-accent/90 transition-colors shadow-lg"
+            >
+              <Plus className="w-4 h-4" />
+              Add listing
+            </Link>
+            <button
+              onClick={handleSignOut}
+              disabled={loggingOut}
+              className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
+            >
+              <LogOut className="w-4 h-4" />
+              Sign out
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-3 gap-4 mb-10">
+          {[
+            { icon: BarChart2, label: "Total listings", value: listings.length, color: "text-primary" },
+            { icon: ShieldCheck, label: "Verified", value: verifiedCount, color: "text-secondary" },
+            { icon: Clock, label: "Pending review", value: pendingCount, color: "text-amber-500" },
+          ].map(({ icon: Icon, label, value, color }) => (
+            <div key={label} className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:shadow-md transition-all">
+              <Icon className={`w-5 h-5 ${color} mx-auto mb-2`} />
+              <div className="text-2xl font-semibold text-gray-900">{value}</div>
+              <div className="text-xs text-gray-500 mt-0.5">{label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-100 bg-gray-50/50">
+            <h2 className="text-base font-semibold text-gray-900">All listings</h2>
+          </div>
+          {listings.length === 0 ? (
+            <div className="text-center py-16">
+              <HomeIcon className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+              <p className="text-gray-400 text-sm">You haven't submitted any listings yet.</p>
+              <Link to="/submit" className="inline-block mt-4 text-primary text-sm hover:underline">
+                Submit your first listing →
+              </Link>
+            </div>
+          ) : (
+            <div className="divide-y divide-gray-50">
+              {listings.map((listing) => {
+                const { label, icon: StatusIcon, className } = statusConfig(listing.listing_status);
+                return (
+                  <div key={listing.id} className="flex items-center gap-4 px-6 py-4 hover:bg-gray-50 transition-colors">
+                    <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-gray-100">
+                      <img
+                        src={getImageUrl(listing.image_url)}
+                        alt={listing.title}
+                        className="w-full h-full object-cover"
+                        onError={(e) => { (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE; }}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate">{listing.title}</p>
+                      <p className="text-xs text-gray-400">{listing.area}, {listing.city}</p>
+                    </div>
+                    <div className="text-sm text-gray-700 hidden sm:block">
+                      KES {listing.price_per_month.toLocaleString()}/mo
+                    </div>
+                    <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs ${className}`}>
+                      <StatusIcon className="w-3.5 h-3.5" />
+                      {label}
+                    </div>
+                    <Link
+                      to={`/property/${listing.id}`}
+                      className="text-xs text-primary hover:underline hidden sm:block"
+                    >
+                      View →
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {landlordPhone && (
+          <div className="mt-6 p-4 bg-green-50 rounded-xl border border-green-100 text-center">
+            <p className="text-sm text-green-800">
+              <MessageCircle className="w-4 h-4 inline mr-2" />
+              Need help? Contact our landlord support on WhatsApp:{" "}
+              <a href={`https://wa.me/${landlordPhone.replace(/\D/g, "")}`} className="font-semibold underline" target="_blank" rel="noopener noreferrer">
+                {landlordPhone}
+              </a>
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+=== FRONTEND: src/app/components/PropertyCard.tsx ===
+import { Link } from "react-router";
+import { useCurrencyContext } from "../context/CurrencyContext";
+import { useSavedProperties } from "../hooks/useSavedProperties";
+import { Icons } from "./Icon";
+import type { Property } from "../../lib/api";
+import { getImageUrl, PLACEHOLDER_IMAGE } from "../../lib/api";
+import { useState } from "react";
+
+interface PropertyCardProps {
+  property: Property;
+}
+
+export function PropertyCard({ property }: PropertyCardProps) {
+  const { format } = useCurrencyContext();
+  const { isSaved, toggleSave } = useSavedProperties();
+  const [isHovered, setIsHovered] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
+  const saved = isSaved(property.id);
+  const imageUrl = imgError ? PLACEHOLDER_IMAGE : getImageUrl(property.image_url);
+
+  const getNoiseColor = (level: string) => {
+    switch (level?.toLowerCase()) {
+      case 'quiet': return 'var(--color-secondary)';
+      case 'moderate': return 'var(--color-accent)';
+      case 'lively': return '#EF4444';
+      default: return '#6B7280';
+    }
+  };
+
+  const handleSave = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsAnimating(true);
+    await toggleSave(property.id);
+    setTimeout(() => setIsAnimating(false), 300);
+  };
+
+  return (
+    <Link
+      to={`/property/${property.id}`}
+      className="group block rounded-xl overflow-hidden shadow-sm transition-all duration-200"
+      style={{
+        transform: isHovered ? 'translateY(-4px)' : 'translateY(0)',
+        boxShadow: isHovered ? '0 12px 24px rgba(0,0,0,0.1)' : '0 2px 8px rgba(0,0,0,0.04)',
+        background: 'var(--bg-card)',
+        border: '0.5px solid var(--border-light)',
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative h-48 overflow-hidden bg-gray-100">
+        <img
+          src={imageUrl}
+          alt={property.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={() => setImgError(true)}
+        />
+
+        {property.listing_status === 'verified' ? (
+          <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+            <Icons.ShieldCheck size={12} className="text-emerald-500" />
+            <span className="text-xs font-medium text-gray-700">Verified</span>
+          </div>
+        ) : property.listing_status === 'pending' ? (
+          <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+            <Icons.Clock size={12} className="text-amber-500" />
+            <span className="text-xs font-medium text-gray-700">Pending review</span>
+          </div>
+        ) : null}
+
+        <button
+          onClick={handleSave}
+          className="absolute top-3 right-3 w-8 h-8 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm transition-all hover:scale-110"
+        >
+          <Icons.Heart
+            size={16}
+            className={`transition-all ${saved ? 'fill-red-500 text-red-500' : 'text-gray-500'} ${isAnimating ? 'heart-saved' : ''}`}
+          />
+        </button>
+
+        <div className="absolute bottom-3 right-3 bg-primary text-white px-3 py-1.5 rounded-lg text-sm font-semibold shadow-sm">
+          {format(property.price_per_month)}<span className="text-xs opacity-80">/mo</span>
+        </div>
+      </div>
+
+      <div className="p-4">
+        <h3 className="font-semibold transition-colors line-clamp-1" style={{ color: 'var(--text-primary)' }}>
+          {property.title}
+        </h3>
+        <p className="text-sm mt-0.5" style={{ color: 'var(--text-secondary)' }}>{property.area}</p>
+
+        <div className="flex items-center gap-3 mt-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
+          <Icons.Bed size={14} />
+          <span>{property.bedrooms === 0 ? 'Studio' : `${property.bedrooms} beds`}</span>
+          <span className="w-1 h-1 rounded-full" style={{ background: 'var(--border-light)' }} />
+          <Icons.Bath size={14} />
+          <span>{property.bathrooms} baths</span>
+          {property.size_sqft && (
+            <>
+              <span className="w-1 h-1 rounded-full" style={{ background: 'var(--border-light)' }} />
+              <Icons.Maximize size={14} />
+              <span>{property.size_sqft} sqft</span>
+            </>
+          )}
+        </div>
+
+        <div className="flex items-center gap-3 mt-3 pt-3 border-t" style={{ borderColor: 'var(--border-light)' }}>
+          <div className="flex items-center gap-1">
+            <Icons.ShieldCheck size={12} className="text-emerald-500" />
+            <span className="text-xs font-medium" style={{ color: 'var(--text-primary)' }}>{property.safety_score}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Icons.Volume2 size={12} style={{ color: getNoiseColor(property.noise_level) }} />
+            <span className="text-xs capitalize" style={{ color: 'var(--text-secondary)' }}>{property.noise_level}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Icons.Navigation size={12} style={{ color: 'var(--color-primary)' }} />
+            <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>{property.commute_rating}</span>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes heartBeat {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.3); }
+          100% { transform: scale(1); }
+        }
+        .heart-saved {
+          animation: heartBeat 0.3s ease;
+        }
+      `}</style>
+    </Link>
+  );
+}
+
+=== FRONTEND: src/app/components/Header.tsx ===
+import { useState, useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router";
+import { Icons } from "./Icon";
+import { getCurrentUser, signOut } from "../../lib/auth";
+import { useTheme } from "../../context/ThemeContext";
+
+interface NavUser {
+  id: string;
+  full_name: string;
+  account_type: "renter" | "landlord" | "administrator";
+}
+
+function WhyBuilderLogo() {
+  return (
+    <div className="flex items-center gap-2">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="10" fill="var(--color-primary)" />
+        <path d="M6 12 L11 26 L16 16 L21 26 L26 12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M29 12 L29 26" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M29 12 Q36 12 36 16 Q36 19 29 19 Q36 19 36 23 Q36 26 29 26" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      </svg>
+      <span className="text-base font-semibold tracking-tight" style={{ color: "var(--text-primary)" }}>
+        Why<span style={{ color: "var(--color-secondary)" }}>Builder</span>
+      </span>
+    </div>
+  );
+}
+
+const NAV_ITEMS = [
+  { name: "Homes", path: "/" },
+  { name: "Browse", path: "/browse" },
+  { name: "About", path: "/about" },
+];
+
+export function Header() {
+  const navigate = useNavigate();
+  const { theme, toggle: toggleTheme } = useTheme();
+  const [user, setUser] = useState<NavUser | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const isDark = theme === "dark";
+
+  useEffect(() => {
+    const u = getCurrentUser();
+    if (u) setUser(u as NavUser);
+  }, []);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
+    }
+    if (menuOpen) document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [menuOpen]);
+
+  async function handleSignOut() {
+    await signOut();
+    setUser(null);
+    setMenuOpen(false);
+    navigate("/");
+  }
+
+  const getDashboardLink = () =>
+    user?.account_type === "landlord" ? "/dashboard" :
+    user?.account_type === "administrator" ? "/admin" : "/account";
+
+  const getDashboardLabel = () =>
+    user?.account_type === "landlord" ? "Dashboard" :
+    user?.account_type === "administrator" ? "Admin" : "My account";
+
+  return (
+    <>
+      <header
+        className="sticky top-0 z-50 backdrop-blur-md transition-colors duration-300"
+        style={{
+          borderBottom: "0.5px solid var(--border-light)",
+          background: "var(--bg-header)"
+        }}
+      >
+        <div className="container-custom">
+          <div className="flex items-center justify-between h-16">
+
+            <WhyBuilderLogo />
+
+            <nav className="hidden md:flex items-center gap-1">
+              {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all"
+                  style={{ color: "var(--text-secondary)" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--bg-hover)";
+                    e.currentTarget.style.color = "var(--text-primary)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "var(--text-secondary)";
+                  }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                to={user ? "/submit" : "/auth?mode=signup&type=landlord"}
+                className="px-4 py-2 rounded-full text-sm font-medium transition-all"
+                style={{ color: "var(--text-secondary)" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--bg-hover)";
+                  e.currentTarget.style.color = "var(--text-primary)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "var(--text-secondary)";
+                }}
+              >
+                For landlords
+              </Link>
+            </nav>
+
+            <div className="flex items-center gap-3">
+              <button
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all hover:scale-105"
+                style={{ background: "var(--bg-hover)" }}
+              >
+                {isDark ? <Icons.Sun size={16} style={{ color: "var(--color-accent)" }} /> : <Icons.Moon size={16} style={{ color: "var(--color-primary)" }} />}
+              </button>
+
+              {user ? (
+                <div className="relative" ref={menuRef}>
+                  <button
+                    onClick={() => setMenuOpen(o => !o)}
+                    className="flex items-center gap-2 py-1.5 pl-2 pr-3 rounded-full border"
+                    style={{
+                      borderColor: "var(--border-light)",
+                      background: "var(--bg-card)"
+                    }}
+                  >
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ background: "var(--color-primary)" }}>
+                      <span className="text-xs font-semibold text-white">
+                        {user.full_name.charAt(0).toUpperCase()}
+                      </span>
+                    </div>
+                    <span className="text-sm" style={{ color: "var(--text-primary)" }}>
+                      {user.full_name.split(" ")[0]}
+                    </span>
+                    <Icons.ChevronDown size={12} style={{ color: "var(--text-muted)", transform: menuOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
+                  </button>
+
+                  {menuOpen && (
+                    <div className="absolute right-0 top-full mt-2 w-48 rounded-xl border shadow-lg overflow-hidden" style={{
+                      background: "var(--bg-card)",
+                      borderColor: "var(--border-light)",
+                    }}>
+                      <div className="px-3 py-2 border-b" style={{ borderColor: "var(--border-light)" }}>
+                        <p className="text-xs capitalize" style={{ color: "var(--text-muted)" }}>{user.account_type}</p>
+                        <p className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>{user.full_name}</p>
+                      </div>
+                      <Link to={getDashboardLink()} onClick={() => setMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 text-sm transition-colors" style={{ color: "var(--text-secondary)" }}>
+                        <Icons.LayoutDashboard size={14} /> {getDashboardLabel()}
+                      </Link>
+                      <Link to="/account" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 text-sm transition-colors" style={{ color: "var(--text-secondary)" }}>
+                        <Icons.Heart size={14} /> Saved
+                      </Link>
+                      {user.account_type === "landlord" && (
+                        <Link to="/submit" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 text-sm transition-colors" style={{ color: "var(--text-secondary)" }}>
+                          <Icons.Plus size={14} /> Submit listing
+                        </Link>
+                      )}
+                      <button onClick={handleSignOut} className="flex items-center gap-2 px-3 py-2 text-sm text-red-500 w-full text-left border-t transition-colors hover:bg-red-50 dark:hover:bg-red-900/20" style={{ borderColor: "var(--border-light)" }}>
+                        <Icons.LogOut size={14} /> Sign out
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <Link to="/auth?mode=login" className="px-4 py-2 text-sm font-medium rounded-full transition-colors" style={{ color: "var(--text-secondary)" }}>Sign in</Link>
+                  <Link to="/auth?mode=signup" className="px-4 py-2 text-sm font-semibold rounded-full text-white" style={{ background: "var(--color-primary)" }}>Get started</Link>
+                </div>
+              )}
+
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden w-9 h-9 rounded-full flex items-center justify-center"
+                style={{ background: "var(--bg-hover)" }}
+              >
+                {mobileMenuOpen ? <Icons.X size={18} /> : <Icons.Menu size={18} />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {mobileMenuOpen && (
+        <div className="fixed inset-x-0 top-16 bottom-0 z-40 p-5" style={{ background: "var(--bg-body)" }}>
+          <div className="flex flex-col gap-2">
+            {[...NAV_ITEMS, { name: "For landlords", path: user ? "/submit" : "/auth?mode=signup&type=landlord" }].map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-3 text-base font-medium border-b"
+                style={{ color: "var(--text-primary)", borderColor: "var(--border-light)" }}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+=== FRONTEND: src/lib/api.ts ===
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+
+const TOKEN_KEY = "whybuilder_token";
+
+export const token = {
+  get: (): string | null => localStorage.getItem(TOKEN_KEY),
+  set: (t: string) => localStorage.setItem(TOKEN_KEY, t),
+  remove: () => localStorage.removeItem(TOKEN_KEY),
+};
+
+async function request<T>(
+  endpoint: string,
+  options?: RequestInit
+): Promise<{ data: T | null; error: string | null }> {
+  const t = token.get();
+
+  try {
+    const res = await fetch(`${API_URL}${endpoint}`, {
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...(t ? { Authorization: `Bearer ${t}` } : {}),
+        ...options?.headers,
+      },
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      return {
+        data: null,
+        error: data.error || data.detail || `HTTP ${res.status}`,
+      };
+    }
+
+    if (data && typeof data === "object" && "results" in data) {
+      return { data: data.results, error: null };
+    }
+
+    return { data, error: null };
+  } catch (err) {
+    return {
+      data: null,
+      error: err instanceof Error ? err.message : "Network error",
+    };
+  }
+}
+
+export type AccountType = "renter" | "landlord" | "administrator";
+export type ListingStatus = "pending" | "verified" | "rejected";
+export type NoiseLevel = "quiet" | "moderate" | "lively";
+
+export interface User {
+  id: string;
+  email: string;
+  username: string;
+  full_name: string;
+  account_type: AccountType;
+  phone_number?: string;
+  trust_score: number;
+  response_rate: number;
+  total_listings: number;
+  verified_listings_count: number;
+}
+
+export interface Property {
+  id: string;
+  title: string;
+  description: string;
+  address: string;
+  area: string;
+  city: string;
+  price_per_month: number;
+  bedrooms: number;
+  bathrooms: number;
+  size_sqft: number | null;
+  property_type: string;
+  listing_status: ListingStatus;
+  safety_score: number;
+  noise_level: string;
+  commute_rating: number;
+  lifestyle_tags: string[];
+  area_insight: string | null;
+  image_url: string | null;
+  landlord_id: string;
+  landlord_name?: string | null;
+  landlord_email?: string | null;
+  landlord_phone?: string | null;
+  latitude?: number | null;
+  longitude?: number | null;
+  location_accuracy?: string;
+  created_at: string;
+  verified_at: string | null;
+  images?: { id: string; image_url: string; display_order: number }[];
+}
+
+export interface SubmitPropertyData {
+  landlordId: string;
+  title: string;
+  description: string;
+  address: string;
+  area: string;
+  city: string;
+  priceKes: number;
+  bedrooms: number;
+  bathrooms: number;
+  sizeSqft: number | null;
+  propertyType: string;
+  safetyScore: number;
+  noiseLevel: NoiseLevel;
+  commuteRating: number;
+  lifestyleTags: string[];
+  areaInsight: string;
+  imageFile: File | null;
+  imageUrl: string;
+  latitude?: number | null;
+  longitude?: number | null;
+  location_accuracy?: string;
+}
+
+export const auth = {
+  getCurrentUser(): User | null {
+    const t = token.get();
+    if (!t) return null;
+    try {
+      const payload = JSON.parse(atob(t.split(".")[1]));
+      return {
+        id: payload.user_id || payload.id,
+        email: payload.email || "",
+        username: payload.username || "",
+        full_name: payload.full_name || "",
+        account_type: payload.account_type || "renter",
+        trust_score: 50,
+        response_rate: 0,
+        total_listings: 0,
+        verified_listings_count: 0,
+      };
+    } catch {
+      token.remove();
+      return null;
+    }
+  },
+
+  async signIn(email: string, password: string): Promise<{ user: User | null; error: string | null }> {
+    const { data, error } = await request<{ user: User; token: string; refresh: string }>("/auth/login/", {
+      method: "POST",
+      body: JSON.stringify({ username: email, password }),
+    });
+    if (error || !data) return { user: null, error: error || "Login failed" };
+    token.set(data.token);
+    return { user: data.user, error: null };
+  },
+
+  async signUp(
+    email: string,
+    password: string,
+    fullName: string,
+    accountType: AccountType
+  ): Promise<{ user: User | null; error: string | null }> {
+    const { data, error } = await request<{ user: User; token: string; refresh: string }>("/auth/register/", {
+      method: "POST",
+      body: JSON.stringify({
+        username: email,
+        email,
+        password,
+        full_name: fullName,
+        account_type: accountType,
+      }),
+    });
+    if (error || !data) return { user: null, error: error || "Signup failed" };
+    token.set(data.token);
+    return { user: data.user, error: null };
+  },
+
+  async resetPassword(email: string): Promise<{ error: string | null }> {
+    return { error: "Password reset not implemented yet" };
+  },
+
+  signOut() {
+    token.remove();
+  },
+};
+
+export const properties = {
+  async list(params?: {
+    area?: string;
+    lifestyle?: string;
+    noise?: string;
+    minBudget?: number;
+    maxBudget?: number;
+    limit?: number;
+  }): Promise<{ data: Property[]; error: string | null }> {
+    const q = new URLSearchParams();
+    if (params?.area) q.set("area", params.area);
+    if (params?.lifestyle) q.set("lifestyle", params.lifestyle);
+    if (params?.noise) q.set("noise", params.noise);
+    if (params?.minBudget) q.set("minBudget", String(params.minBudget));
+    if (params?.maxBudget) q.set("maxBudget", String(params.maxBudget));
+    if (params?.limit) q.set("limit", String(params.limit));
+
+    const { data, error } = await request<Property[]>(`/properties/${q.toString() ? `?${q}` : ""}`);
+    return { data: data ?? [], error };
+  },
+
+  async get(id: string): Promise<{ data: Property | null; error: string | null }> {
+    return request<Property>(`/properties/${id}/`);
+  },
+
+  async submit(data: SubmitPropertyData): Promise<{ data: Property | null; error: string | null }> {
+    const formData = new FormData();
+    formData.append("title", data.title);
+    formData.append("description", data.description);
+    formData.append("address", data.address);
+    formData.append("area", data.area);
+    formData.append("city", data.city);
+    formData.append("price_per_month", String(data.priceKes));
+    formData.append("bedrooms", String(data.bedrooms));
+    formData.append("bathrooms", String(data.bathrooms));
+    formData.append("property_type", data.propertyType);
+    formData.append("safety_score", String(data.safetyScore));
+    formData.append("noise_level", data.noiseLevel);
+    formData.append("commute_rating", String(data.commuteRating));
+    formData.append("lifestyle_tags", JSON.stringify(data.lifestyleTags));
+    formData.append("area_insight", data.areaInsight);
+
+    if (data.sizeSqft) {
+      formData.append("size_sqft", String(data.sizeSqft));
+    }
+
+    if (data.latitude !== undefined && data.latitude !== null) {
+      formData.append("latitude", String(data.latitude));
+    }
+    if (data.longitude !== undefined && data.longitude !== null) {
+      formData.append("longitude", String(data.longitude));
+    }
+    if (data.location_accuracy) {
+      formData.append("location_accuracy", data.location_accuracy);
+    }
+
+    if (data.imageFile) {
+      formData.append("image", data.imageFile);
+    } else if (data.imageUrl) {
+      formData.append("image_url", data.imageUrl);
+    }
+
+    const t = token.get();
+    try {
+      const res = await fetch(`${API_URL}/properties/create/`, {
+        method: "POST",
+        headers: {
+          ...(t ? { Authorization: `Bearer ${t}` } : {}),
+        },
+        body: formData,
+      });
+
+      const responseData = await res.json();
+
+      if (!res.ok) {
+        return {
+          data: null,
+          error: responseData.error || responseData.detail || `HTTP ${res.status}`,
+        };
+      }
+
+      return { data: responseData, error: null };
+    } catch (err) {
+      return {
+        data: null,
+        error: err instanceof Error ? err.message : "Network error",
+      };
+    }
+  },
+
+  async save(propertyId: string): Promise<{ error: string | null }> {
+    const { error } = await request(`/properties/${propertyId}/save/`, { method: "POST" });
+    return { error };
+  },
+
+  async unsave(propertyId: string): Promise<{ error: string | null }> {
+    const { error } = await request(`/properties/${propertyId}/unsave/`, { method: "DELETE" });
+    return { error };
+  },
+
+  async listByLandlord(landlordId: string): Promise<{ data: Property[]; error: string | null }> {
+    const { data, error } = await request<Property[]>(`/properties/?landlord_id=${landlordId}`);
+    return { data: data ?? [], error };
+  },
+
+  async listAll(): Promise<{ data: Property[]; error: string | null }> {
+    const { data, error } = await request<Property[]>("/properties/all/");
+    return { data: data ?? [], error };
+  },
+
+  async updateStatus(propertyId: string, status: ListingStatus): Promise<{ error: string | null }> {
+    const { error } = await request(`/properties/${propertyId}/status/`, {
+      method: "PATCH",
+      body: JSON.stringify({ listing_status: status }),
+    });
+    return { error };
+  },
+};
+
+export const saved = {
+  async list(): Promise<{ data: Property[]; error: string | null }> {
+    const { data, error } = await request<Property[]>("/saved/");
+    return { data: data ?? [], error };
+  },
+
+  async save(propertyId: string): Promise<{ error: string | null }> {
+    return properties.save(propertyId);
+  },
+
+  async remove(propertyId: string): Promise<{ error: string | null }> {
+    return properties.unsave(propertyId);
+  },
+};
+
+export const preferences = {
+  async get(): Promise<{ data: { lifestyle_tags: string[]; noise_level: string | null } | null; error: string | null }> {
+    return request("/preferences/");
+  },
+
+  async save(data: { lifestyleTags: string[]; noiseLevel: string | null }): Promise<{ error: string | null }> {
+    const { error } = await request("/preferences/", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    return { error };
+  },
+};
+
+export const areas = {
+  async list(): Promise<{ data: { area: string; count: number }[]; error: string | null }> {
+    return request("/areas/");
+  },
+
+  async neighbourhood(area: string): Promise<{ data: any; error: string | null }> {
+    return request(`/neighbourhood/${encodeURIComponent(area)}/`);
+  },
+};
+
+export const hero = {
+  async get(): Promise<{ data: { id: string; image_url: string; area: string; label: string }[]; error: string | null }> {
+    return request("/hero-slides/");
+  },
+};
+
+export const PLACEHOLDER_IMAGE = "/images/placeholders/property-placeholder.svg";
+export const PLACEHOLDER_ICON = "/images/placeholders/icon-placeholder.svg";
+
+export function getImageUrl(url: string | null | undefined): string {
+  if (!url) return PLACEHOLDER_IMAGE;
+  if (url.startsWith("http")) return url;
+  if (url.startsWith("/images/")) return url;
+  return PLACEHOLDER_IMAGE;
+}
+
+export const landlords = {
+  async get(id: string): Promise<{ data: any; error: string | null }> {
+    return request(`/landlords/${id}/`);
+  },
+  async list(): Promise<{ data: any[]; error: string | null }> {
+    return request("/landlords/");
+  }
+};
+
+export const neighbourhood = {
+  async get(area: string): Promise<{ data: any; error: string | null }> {
+    return request(`/properties/neighbourhood/${encodeURIComponent(area)}/`);
+  }
+};
+
+export const notifications = {
+  async list(): Promise<{ data: any[]; error: string | null }> {
+    return request("/notifications/");
+  },
+  async markRead(id: string): Promise<{ error: string | null }> {
+    return request(`/notifications/${id}/read/`, { method: "POST" });
+  }
+};
+
+=== FRONTEND: src/styles/index.css ===
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* ============================================
+   WhyBuilder Complete Color System
+   ============================================ */
+
+/* LIGHT THEME (Default - Professional Real Estate) */
+:root {
+  /* Page Backgrounds */
+  --bg-body: #F5F0E8;
+  --bg-header: #FFFFFF;
+  --bg-footer: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #F9FAFB;
+  --bg-hover: #F3F4F6;
+  --bg-input: #FFFFFF;
+  --bg-modal: #FFFFFF;
+  
+  /* Colors */
+  --color-primary: #1E3A8A;
+  --color-primary-hover: #15307A;
+  --color-secondary: #10B981;
+  --color-secondary-hover: #0D9668;
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+  
+  /* Text Colors */
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --text-inverse: #FFFFFF;
+  
+  /* Border Colors */
+  --border-light: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.1);
+  --border-heavy: rgba(0, 0, 0, 0.15);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* DARK THEME (Modern - User Preference) */
+.dark {
+  /* Page Backgrounds */
+  --bg-body: #0A1228;
+  --bg-header: #0F172A;
+  --bg-footer: #0F172A;
+  --bg-card: #1E293B;
+  --bg-sidebar: #111827;
+  --bg-hover: #334155;
+  --bg-input: #1E293B;
+  --bg-modal: #1E293B;
+  
+  /* Colors */
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-secondary: #10B981;
+  --color-secondary-hover: #059669;
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+  
+  /* Text Colors */
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-inverse: #111827;
+  
+  /* Border Colors */
+  --border-light: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --border-heavy: rgba(255, 255, 255, 0.15);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Global styles */
+* {
+  border-color: var(--border-light);
+}
+
+html, body {
+  background-color: var(--bg-body);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-primary);
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+h1, h2, h3, .serif {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+/* Container */
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding: 0 2rem;
+  }
+}
+
+/* Background Utilities */
+.bg-body { background-color: var(--bg-body); }
+.bg-header { background-color: var(--bg-header); }
+.bg-footer { background-color: var(--bg-footer); }
+.bg-card { background-color: var(--bg-card); }
+.bg-hover { background-color: var(--bg-hover); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-accent { background-color: var(--color-accent); }
+
+/* Text Utilities */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-accent { color: var(--color-accent); }
+.text-inverse { color: var(--text-inverse); }
+
+/* Border Utilities */
+.border-primary { border-color: var(--color-primary); }
+.border-secondary { border-color: var(--color-secondary); }
+
+/* Card Styles */
+.card-premium {
+  background: var(--bg-card);
+  border-radius: 1rem;
+  border: 0.5px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+.card-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Heart Animation */
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.heart-saved {
+  animation: heartBeat 0.3s ease;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important;
+  }
+}
+
+/* Theme Variables for Consistency */
+:root {
+  --color-dark-bg: #0A1228;
+  --color-dark-surface: #0F1E3D;
+  --color-primary-rgb: 30, 58, 138;
+}
+
+.dark {
+  --color-dark-bg: #0A1228;
+  --color-dark-surface: #0F1E3D;
+}
+
+=== FRONTEND: package.json ===
+{
+  "name": "whybuilder",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "cd server && node index.js",
+    "dev:all": "concurrently --names \"client,server\" --prefix-colors \"blue,green\" \"npm run dev\" \"npm run dev:server\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "1.2.3",
+    "@radix-ui/react-alert-dialog": "1.1.6",
+    "@radix-ui/react-aspect-ratio": "1.1.2",
+    "@radix-ui/react-avatar": "1.1.3",
+    "@radix-ui/react-checkbox": "1.1.4",
+    "@radix-ui/react-collapsible": "1.1.3",
+    "@radix-ui/react-context-menu": "2.2.6",
+    "@radix-ui/react-dialog": "1.1.6",
+    "@radix-ui/react-dropdown-menu": "2.1.6",
+    "@radix-ui/react-hover-card": "1.1.6",
+    "@radix-ui/react-label": "2.1.2",
+    "@radix-ui/react-menubar": "1.1.6",
+    "@radix-ui/react-navigation-menu": "1.2.5",
+    "@radix-ui/react-popover": "1.1.6",
+    "@radix-ui/react-progress": "1.1.2",
+    "@radix-ui/react-radio-group": "1.2.3",
+    "@radix-ui/react-scroll-area": "1.2.3",
+    "@radix-ui/react-select": "2.1.6",
+    "@radix-ui/react-separator": "1.1.2",
+    "@radix-ui/react-slider": "1.2.3",
+    "@radix-ui/react-slot": "1.1.2",
+    "@radix-ui/react-switch": "1.1.3",
+    "@radix-ui/react-tabs": "1.1.3",
+    "@radix-ui/react-toggle": "1.1.2",
+    "@radix-ui/react-toggle-group": "1.1.2",
+    "@radix-ui/react-tooltip": "1.1.8",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "cmdk": "1.1.1",
+    "date-fns": "3.6.0",
+    "embla-carousel-react": "8.6.0",
+    "input-otp": "1.4.2",
+    "lucide-react": "0.487.0",
+    "motion": "12.23.24",
+    "next-themes": "0.4.6",
+    "react-day-picker": "8.10.1",
+    "react-helmet-async": "^3.0.0",
+    "react-hook-form": "7.55.0",
+    "react-resizable-panels": "2.1.7",
+    "react-router": "7.13.0",
+    "recharts": "2.15.2",
+    "sonner": "2.0.3",
+    "tailwind-merge": "3.2.0",
+    "tw-animate-css": "1.3.8",
+    "vaul": "1.1.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "4.1.12",
+    "@vitejs/plugin-react": "4.7.0",
+    "concurrently": "^8.2.2",
+    "tailwindcss": "4.1.12",
+    "vite": "^6.3.5"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "6.3.5"
+    }
+  }
+}
+
+=== REQUIREMENTS.TXT ===
+2ping==4.5
+aiodns==3.2.0
+aiofiles==24.1.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.5
+aioquic==1.2.0
+aiosignal==1.3.2
+aiosqlite==0.21.0
+aniso8601==10.0.1
+annotated-types==0.7.0
+anyio==4.8.0
+apparmor==4.1.0
+argon2-cffi==21.1.0
+arrow==1.3.0
+asgiref==3.8.1
+asttokens==3.0.0
+async-timeout==5.0.1
+attrs==25.3.0
+autocommand==2.2.2
+autorecon==2.0.36
+babel==2.17.0
+bcrypt==4.2.0
+beautifulsoup4==4.13.4
+bidict==0.23.1
+binwalk==2.4.3
+blinker==1.9.0
+Bottleneck==1.4.2
+Brotli==1.1.0
+cairocffi==1.7.1
+capstone==5.0.7
+Cerberus==1.3.7
+certifi==2025.1.31
+cffi==1.17.1
+chardet==5.2.0
+charset-normalizer==3.4.2
+click==8.1.8
+click-plugins==1.1.1
+colorama==0.4.6
+colored-traceback==0.4.2
+contourpy==1.3.1
+crit==4.1.1
+cryptography==43.0.0
+cssselect==1.3.0
+cupshelpers==1.0
+cycler==0.12.1
+dbus-python==1.4.0
+decorator==5.2.1
+defusedxml==0.7.1
+dhcpig==0.0.0
+dicttoxml==1.7.16
+dirsearch==0.4.3
+distro==1.9.0
+dnslib==0.9.25
+dnspython==2.7.0
+dsinternals==1.2.4
+email_validator==2.2.0
+enum4linux-ng==1.3.10
+et_xmlfile==2.0.0
+eventlet==0.39.1
+executing==2.2.0
+filelock==3.18.0
+flasgger==0.9.7.2.dev2
+Flask==3.1.1
+Flask-Compress==1.4.0
+Flask-RESTful==0.3.10
+Flask-SocketIO==5.5.1
+fonttools==4.57.0
+fqdn==1.5.1
+frozenlist==1.6.0
+fs==2.4.16
+GeoIP==1.3.2
+geoip2==2.9.0
+gevent==24.11.1
+gevent-websocket==0.10.1
+git-cola==4.12.0
+gpg==1.24.2
+greenlet==3.1.0
+gssapi==1.9.0
+h11==0.14.0
+h2==4.2.0
+hashID==3.1.4
+hpack==4.0.0
+html5lib-modern==1.2
+httpcore==1.0.7
+httplib2==0.22.0
+httpx==0.28.1
+httpx-sse==0.4.0
+hyperframe==6.0.0
+idna==3.10
+imageio==2.37.0
+impacket==0.12.0
+inflect==7.3.1
+instaloader==4.14.1
+intervaltree==3.0.2
+invoke==2.2.0
+ipdb==0.13.13
+ipython==8.35.0
+isoduration==20.11.0
+itsdangerous==2.2.0
+jaraco.context==6.0.1
+jaraco.functools==4.1.0
+jaraco.text==4.0.0
+jedi==0.19.1
+Jinja2==3.1.6
+jsonpointer==2.4
+jsonschema==4.19.2
+jsonschema-specifications==2023.12.1
+kaitaistruct==0.10
+kiwisolver==1.4.7
+ldap3==2.9.1
+ldapdomaindump==0.9.4
+legacy-cgi==2.6.3
+LibAppArmor==4.1.0
+libvirt-python==11.3.0
+linkify-it-py==2.0.3
+llvmlite==0.44.0
+logutils==0.3.5
+lxml==5.4.0
+lz4==4.4.0+dfsg
+Mako==1.3.9.dev0
+Markdown==3.7
+markdown-it-py==3.0.0
+MarkupSafe==2.1.5
+mat2==0.13.5
+matplotlib==3.10.1+dfsg1
+matplotlib-inline==0.1.7
+maxminddb==2.6.3
+mcp==1.12.0
+mdurl==0.1.2
+mechanize==0.4.10
+mistune==3.1.3
+mitmproxy==12.2.0
+more-itertools==10.7.0
+mpmath==1.3.0
+msgpack==1.0.3
+multidict==6.4.3
+mutagen==1.47.0
+netaddr==1.3.0
+netifaces==0.11.0
+notify2==0.3.1
+ntlm-auth==1.5.0
+ntpsec==1.2.3
+numba==0.61.2
+numexpr==2.10.2
+numpy==2.2.4
+nyx==2.1.0
+odfpy==1.4.2
+olefile==0.47
+onboard==1.4.1
+onionshare==2.6.3
+onionshare_cli==2.6.3
+openpyxl==3.1.5
+outcome==1.2.0
+packaging==25.0
+pandas==2.2.3+dfsg
+paramiko==3.5.1
+parso==0.8.4
+pcapy==0.11.5.dev0
+pefile==2024.8.26
+pexpect==4.9.0
+pillow==11.1.0
+platformdirs==4.3.7
+pluginbase==1.0.1
+plumbum==1.9.0
+ply==3.11
+polib==1.2.0
+pooch==1.8.2
+prettytable==3.15.1
+prompt_toolkit==3.0.51
+propcache==0.3.1
+protobuf==4.21.12
+psutil==7.0.0
+psycopg2==2.9.10
+ptyprocess==0.7.0
+publicsuffix2==2.20191221
+pure_eval==0.2.3
+pwntools==4.14.1
+py-cpuinfo==9.0.0
+pyasn1==0.6.1
+pyasn1_modules==0.4.1
+pyasyncore==1.0.2
+pycairo==1.27.0
+pycares==4.4.0
+pycparser==2.22
+pycriu==4.1.1
+pycryptodomex==3.20.0
+pycups==2.0.4
+pycurl==7.45.6
+pydantic==2.10.6
+pydantic-settings==2.8.1
+pydantic_core==2.27.2
+pyelftools==0.32
+Pygments==2.18.0
+PyGObject==3.50.0
+pyinotify==0.9.6
+pylsqpack==0.3.18
+pymongo==4.10.1
+pymssql==2.3.2
+PyNaCl==1.5.0
+pynvim==0.5.2
+pyodbc==5.2.0
+PyOpenGL==3.1.9
+pyOpenSSL==25.0.0
+pyparsing==3.1.2
+pyperclip==1.8.2
+PyQt5==5.15.11
+PyQt5_sip==12.17.0
+PyQt6==6.9.0
+PyQt6-WebEngine==6.9.0
+PyQt6_sip==13.10.0
+pyqtgraph==0.13.7
+pyrtlsdr==0.2.91
+pyserial==3.5
+PySide6==6.8.2.1
+pysmbc==1.0.25.1
+pysmi==0.3.4
+pysnmp==4.4.12
+PySocks==1.7.1
+pyspnego==0.10.2
+python-apt==3.0.0
+python-dateutil==2.9.0
+python-debian==1.0.1
+python-dotenv==1.0.1
+python-engineio==4.11.2
+python-gnupg==0.5.4
+python-libnmap==0.7.3
+python-magic==0.4.27
+python-magic-ahupp==0.4.13
+python-memcached==1.60
+python-multipart==0.0.20
+python-socketio==5.12.1
+pytz==2025.2
+pyxdg==0.28
+PyYAML==6.0.2
+qrcode==8.2
+QtPy==2.4.3
+redis==6.1.0
+referencing==0.36.2
+requests==2.32.3
+requests-file==2.1.0
+requests-futures==1.0.2
+requests_ntlm==1.3.0
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rfc3987==1.3.8
+rich==13.9.4
+rocket==1.5.1
+ROPGadget==7.6
+rpds-py==0.21.0
+rpyc==6.0.1
+rq==2.3.3
+rtlsdr-scanner==1.3.2
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+scapy==2.6.1
+scipy==1.15.3
+selenium==4.24.0
+sentry-sdk==2.18.0
+service-identity==24.2.0
+setproctitle==1.3.6
+setuptools==78.1.1
+shellingham==1.5.4
+sherlock-project==0
+shiboken6==6.8.2.1
+shiboken6-generator==6.8.2.1
+shodan==1.31.0
+simple-websocket==1.1.0
+simplejson==3.20.1
+six==1.17.0
+smbmap==1.10.7
+sniffio==1.3.1
+sortedcontainers==2.4.0
+soupsieve==2.7
+specan==0.0.0
+SQLAlchemy==2.0.40
+sse-starlette==2.3.4
+stack-data==0.6.3
+starlette==0.46.1
+stem==1.8.2
+sympy==1.13.3
+tables==3.10.2
+tabulate==0.9.0
+telnetlib==0.0.0
+termcolor==2.4.0
+tldextract==5.1.2
+toml==0.10.2
+tomli==2.2.1
+torbrowser-launcher==0.3.7
+tornado==6.4.2
+tqdm==4.67.1
+traitlets==5.14.3
+trio==0.29.0
+trio-websocket==0.12.2
+ttkthemes==3.2.2
+typeguard==4.4.2
+typer==0.15.2
+types-aiofiles==24.1
+types-antlr4-python3-runtime==4.13
+types-assertpy==1.1
+types-atheris==2.3
+types-aws-xray-sdk==2.14
+types-beautifulsoup4==4.12
+types-bleach==6.2
+types-boltons==24.1
+types-braintree==4.31
+types-cachetools==5.5
+types-caldav==1.3
+types-capturer==3.0
+types-cffi==1.16
+types-chevron==0.14
+types-click-default-group==1.2
+types-click-spinner==0.1
+types-colorama==0.4
+types-commonmark==0.9
+types-console-menu==0.8
+types-corus==0.10
+types-croniter==5.0.1
+types-dateparser==1.2
+types-decorator==5.1
+types-defusedxml==0.7
+types-Deprecated==1.2.15
+types-docker==7.1
+types-dockerfile-parse==2.0
+types-docutils==0.21
+types-editdistance==0.8
+types-entrypoints==0.4
+types-ExifRead==3.0
+types-fanstatic==1.4
+types-first==2.0
+types-flake8==7.1
+types-flake8-bugbear==24.12.12
+types-flake8-builtins==2.5
+types-flake8-docstrings==1.7
+types-flake8-rst-docstrings==0.3
+types-flake8-simplify==0.21
+types-flake8-typing-imports==1.16
+types-Flask-Cors==5.0
+types-Flask-Migrate==4.0
+types-Flask-SocketIO==5.4
+types-fpdf2==2.8.2
+types-gdb==15.0
+types-gevent==24.11
+types-google-cloud-ndb==2.3
+types-greenlet==3.1
+types-hdbcli==2.23
+types-html5lib==1.1
+types-httplib2==0.22
+types-humanfriendly==10.0
+types-hvac==2.3
+types-ibm-db==3.2.4
+types-icalendar==6.1
+types-influxdb-client==1.45
+types-inifile==0.4
+types-JACK-Client==0.5
+types-Jetson.GPIO==2.1
+types-jmespath==1.0
+types-jsonschema==4.23
+types-jwcrypto==1.5
+types-keyboard==0.13
+types-ldap3==2.9
+types-libsass==0.23
+types-lupa==2.2
+types-lzstring==1.0
+types-m3u8==6.0
+types-Markdown==3.7
+types-mock==5.1
+types-mypy-extensions==1.0
+types-mysqlclient==2.2
+types-nanoid==2.0.0
+types-netaddr==1.3
+types-netifaces==0.11
+types-networkx==3.4.2
+types-oauthlib==3.2
+types-objgraph==3.6
+types-olefile==0.47
+types-openpyxl==3.1.5
+types-opentracing==2.4
+types-paramiko==3.5
+types-parsimonious==0.10
+types-passlib==1.7
+types-passpy==1.0
+types-peewee==3.17.8
+types-pep8-naming==0.14
+types-pexpect==4.9
+types-pika-ts==1.3
+types-polib==1.2
+types-portpicker==1.6
+types-protobuf==5.29.1
+types-psutil==6.1
+types-psycopg2==2.9.10
+types-pyasn1==0.6
+types-pyaudio==0.2
+types-PyAutoGUI==0.9
+types-pycocotools==2.0
+types-pycurl==7.45.4
+types-pyfarmhash==0.4
+types-pyflakes==3.2
+types-pygit2==1.15
+types-Pygments==2.18
+types-pyinstaller==6.11
+types-pyjks==20.0
+types-PyMySQL==1.1
+types-pynput==1.7.7
+types-pyOpenSSL==24.1
+types-pyRFC3339==2.0.1
+types-PyScreeze==1.0.1
+types-pyserial==3.5
+types-pysftp==0.2
+types-pytest-lazy-fixture==0.6
+types-python-crontab==3.2
+types-python-datemath==3.0.1
+types-python-dateutil==2.9
+types-python-http-client==3.3.7
+types-python-jenkins==1.8
+types-python-jose==3.3
+types-python-nmap==0.7
+types-python-xlib==0.33
+types-pytz==2024.2
+types-pywin32==308
+types-pyxdg==0.28
+types-PyYAML==6.0
+types-qrbill==1.1
+types-qrcode==8.0
+types-regex==2024.11.6
+types-reportlab==4.2.5
+types-requests==2.32
+types-requests-oauthlib==2.0
+types-retry==0.9
+types-RPi.GPIO==0.7
+types-s2clientprotocol==5
+types-seaborn==0.13.2
+types-Send2Trash==1.8
+types-setuptools==75.6
+types-shapely==2.0
+types-simplejson==3.19
+types-singledispatch==4.1
+types-six==1.17
+types-slumber==0.7
+types-str2bool==1.1
+types-tabulate==0.9
+types-tensorflow==2.18.0
+types-TgCrypto==1.2
+types-toml==0.10
+types-toposort==1.10
+types-tqdm==4.67
+types-translationstring==1.4
+types-tree-sitter-languages==1.10
+types-ttkthemes==3.2
+types-ujson==5.10
+types-unidiff==0.7
+types-untangle==1.2
+types-usersettings==1.1
+types-uWSGI==2.0
+types-vobject==0.9.9
+types-waitress==3.0.1
+types-WebOb==1.8
+types-whatthepatch==1.0
+types-workalendar==17.0
+types-WTForms==3.2.1
+types-wurlitzer==3.1
+types-xdgenvpy==3.0
+types-xmltodict==0.14
+types-zstd==1.5
+types-zxcvbn==4.4
+typing_extensions==4.13.2
+uc-micro-py==1.0.3
+ufoLib2==0.17.1
+ufw==0.36.2
+unicodedata2==15.1.0
+unicorn==2.1.1
+Unidecode==1.4.0
+uritemplate==4.1.1
+urllib3==2.3.0
+urwid==2.6.16
+uvicorn==0.32.0
+uvloop==0.21.0
+validators==0.20.0
+vinetto==0.8.0
+visvis==1.13.0
+wafw00f==2.3.1
+waitress==3.0.2
+wcwidth==0.2.13
+webcolors==1.13
+webencodings==0.5.1
+websocket-client==1.8.0
+websockets==15.0.1
+websploit==4.0.4
+Werkzeug==3.1.3
+wfuzz==3.1.0
+wheel==0.46.1
+wifite==2.7.0
+wsproto==1.2.0
+wxPython==4.2.3
+xcffib==1.5.0
+xdg==5
+XlsxWriter==3.1.9
+yara-python==4.5.1
+yarl==1.19.0
+yt-dlp==2025.4.30
+zipp==3.21.0
+zombie-imp==0.0.3
+zope.event==5.0
+zope.interface==7.2
+zopfli==0.2.3.post1
+zstandard==0.23.0
+
+=== MANAGE.PY ===
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+import os
+import sys
+
+
+def main():
+    """Run administrative tasks."""
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whybuilder_api.settings')
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
+
+
+if __name__ == '__main__':
+    main()

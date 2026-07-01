@@ -10,7 +10,10 @@ import {
   type SubmitPropertyData,
   PLACEHOLDER_IMAGE,
   PLACEHOLDER_ICON,
-  getImageUrl
+  getImageUrl,
+  uploadPropertyImages,
+  deletePropertyImage,
+  type ImageUploadResult,
 } from "./api";
 
 export {
@@ -26,6 +29,9 @@ export {
   PLACEHOLDER_IMAGE,
   PLACEHOLDER_ICON,
   getImageUrl,
+  uploadPropertyImages,
+  deletePropertyImage,
+  type ImageUploadResult,
 };
 
 export const fetchVerifiedProperties = apiProperties.list;

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router";
-import { ArrowRight, ShieldCheck, MapPin, Loader2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, MapPin } from "lucide-react";
 
 interface HeroSlide {
   id: number;
@@ -11,7 +11,6 @@ interface HeroSlide {
   active: boolean;
 }
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 const SLIDE_DURATION = 5000;
 
 function WhyBuilderLogo() {
@@ -37,38 +36,15 @@ const TRUST_BADGES = [
 ];
 
 export function HeroSection() {
-  const [slides, setSlides] = useState<HeroSlide[]>([]);
+const HERO_SLIDES: HeroSlide[] = [
+  { id: 1, image_url: "/images/hero/karen-peaceful-01.jpg", area: "Karen, Nairobi", label: "Family living · Safe · Quiet", sort_order: 1, active: true },
+  { id: 2, image_url: "/images/hero/westlands-vibrant-01.jpg", area: "Westlands, Nairobi", label: "Urban professionals · Connected · Lively", sort_order: 2, active: true },
+  { id: 3, image_url: "/images/hero/lavington-elegant-01.jpg", area: "Lavington, Nairobi", label: "Remote work · Calm streets · Well-served", sort_order: 3, active: true },
+];
+
+  const [slides] = useState<HeroSlide[]>(HERO_SLIDES);
   const [current, setCurrent] = useState(0);
   const [fade, setFade] = useState(true);
-  const [loading, setLoading] = useState(true);
-
-  const fetchSlides = useCallback(async () => {
-    try {
-      const res = await fetch(`${API_URL}/hero-slides`);
-      const data = await res.json();
-      if (Array.isArray(data) && data.length > 0) {
-        setSlides(data);
-      } else {
-        setSlides([
-          { id: 1, image_url: "/images/hero/karen-peaceful-01.jpg", area: "Karen, Nairobi", label: "Family living · Safe · Quiet", sort_order: 1, active: true },
-          { id: 2, image_url: "/images/hero/westlands-vibrant-01.jpg", area: "Westlands, Nairobi", label: "Urban professionals · Connected · Lively", sort_order: 2, active: true },
-          { id: 3, image_url: "/images/hero/lavington-elegant-01.jpg", area: "Lavington, Nairobi", label: "Remote work · Calm streets · Well-served", sort_order: 3, active: true },
-        ]);
-      }
-    } catch {
-      setSlides([
-        { id: 1, image_url: "/images/hero/karen-peaceful-01.jpg", area: "Karen, Nairobi", label: "Family living · Safe · Quiet", sort_order: 1, active: true },
-        { id: 2, image_url: "/images/hero/westlands-vibrant-01.jpg", area: "Westlands, Nairobi", label: "Urban professionals · Connected · Lively", sort_order: 2, active: true },
-        { id: 3, image_url: "/images/hero/lavington-elegant-01.jpg", area: "Lavington, Nairobi", label: "Remote work · Calm streets · Well-served", sort_order: 3, active: true },
-      ]);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchSlides();
-  }, [fetchSlides]);
 
   const goToSlide = useCallback((index: number) => {
     setFade(false);
@@ -85,14 +61,6 @@ export function HeroSection() {
     }, SLIDE_DURATION);
     return () => clearInterval(timer);
   }, [current, goToSlide, slides.length]);
-
-  if (loading) {
-    return (
-      <div className="h-screen min-h-[560px] bg-[var(--color-dark-bg)] flex items-center justify-center">
-        <Loader2 size={32} className="text-secondary animate-spin" />
-      </div>
-    );
-  }
 
   if (slides.length === 0) return null;
 
@@ -134,16 +102,16 @@ export function HeroSection() {
           </p>
           <div className="flex flex-wrap gap-3.5 mb-12">
             <Link
-              to="/quiz"
+              to="/browse"
               className="inline-flex items-center gap-2 bg-secondary text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-secondary/90 transition-all hover:-translate-y-0.5"
             >
-              Find my match <ArrowRight size={16} />
+              Browse verified homes <ArrowRight size={16} />
             </Link>
             <Link
-              to="/browse"
+              to="/auth?mode=signup&type=landlord"
               className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-7 py-3 rounded-full text-sm font-medium hover:bg-white/20 transition-all"
             >
-              See all homes
+              List your property
             </Link>
           </div>
           <div className="flex flex-wrap gap-8 border-t border-white/20 pt-7">

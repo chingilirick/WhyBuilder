@@ -9,6 +9,7 @@ class User(AbstractUser):
     ]
     
     account_type = models.CharField(max_length=20, choices=ACCOUNT_TYPES, default='renter')
+    full_name = models.CharField(max_length=150, blank=True)
     trust_score = models.IntegerField(default=50)
     phone_number = models.CharField(max_length=15, blank=True)
     business_name = models.CharField(max_length=100, blank=True)
