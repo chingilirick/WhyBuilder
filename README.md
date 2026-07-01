@@ -5,7 +5,7 @@
 
 <img width="1920" height="945" alt="HOUSE" src="https://github.com/user-attachments/assets/6377b209-c0d6-433b-a190-dede402ba85d" />
 ---
-Decision infrastructure for the Nairobi rental market.
+**Decision infrastructure for the Nairobi rental market.**
 
 ## Problem Statement
 
