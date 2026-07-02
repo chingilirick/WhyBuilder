@@ -1,7 +1,7 @@
-<img width="1920" height="945" alt="HOUSE" src="https://github.com/user-attachments/assets/b5774a31-d09f-4687-abd9-3050368dd19f" />
+
 <img width="1920" height="945" alt="HOME" src="https://github.com/user-attachments/assets/9606563d-3b7d-48da-81ba-b5f62b4911b0" />
 
-
+<img width="1920" height="945" alt="HOUSE" src="https://github.com/user-attachments/assets/b5774a31-d09f-4687-abd9-3050368dd19f" />
 
 ---
 
