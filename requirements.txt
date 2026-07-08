@@ -221,7 +221,7 @@ python-apt==3.0.0
 python-dateutil==2.9.0
 python-debian==1.0.1
 python-dotenv==1.0.1
-python-engineio==4.11.2
+python-engineio==4.13.2
 python-gnupg==0.5.4
 python-libnmap==0.7.3
 python-magic==0.4.27
