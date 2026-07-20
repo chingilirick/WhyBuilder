@@ -286,7 +286,7 @@ tldextract==5.1.2
 toml==0.10.2
 tomli==2.2.1
 torbrowser-launcher==0.3.7
-tornado==6.4.2
+tornado==6.5.7
 tqdm==4.67.1
 traitlets==5.14.3
 trio==0.29.0
