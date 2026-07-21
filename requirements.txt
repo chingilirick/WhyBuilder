@@ -158,7 +158,7 @@ parso==0.8.4
 pcapy==0.11.5.dev0
 pefile==2024.8.26
 pexpect==4.9.0
-pillow==11.1.0
+pillow==12.3.0
 platformdirs==4.3.7
 pluginbase==1.0.1
 plumbum==1.9.0
